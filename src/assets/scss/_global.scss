@@ -1,0 +1,22 @@
+.container__1200px {
+    @include make-container(1200px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+select {
+    outline: none;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
