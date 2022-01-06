@@ -1,0 +1,35 @@
+.experience {
+    color: $lightBlack;
+    background-color: white;
+
+    padding: 5em 0;
+    text-align: center;
+
+    &__heading {
+        font-family: 'GothamPro', sans-serif;
+        font-weight: 900;
+
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+    }
+
+    &__desc {
+        font-size: 0.9em;
+        font-weight: 300;
+
+        span {
+            font-weight: 400;
+            color: $darkBlue;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        margin-top: 2em;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        
+    }
+}
