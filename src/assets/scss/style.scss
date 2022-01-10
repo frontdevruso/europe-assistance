@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-color: #F0F0F0;
+    background-color: white;
     font-size: 20px;
     color: $lightBlack;
 
@@ -24,3 +24,4 @@ body {
 
 @import './blocks/main-slider.scss';
 @import './blocks/experience.scss';
+@import './blocks/services.scss';
