@@ -37,3 +37,12 @@ input {
 input:focus {
     outline: none;
 }
+
+.g-heading {
+    font-weight: 900;
+    font-size: 40px;
+    font-family: 'GothamPro', sans-serif;
+
+    color: $lightBlack;
+    line-height: 120%;
+}

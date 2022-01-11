@@ -89,6 +89,29 @@
                     }
                 }
             }
+
+            @media (min-width: 1920px) {
+                height: 480px;
+
+                &-info {
+                    padding: 0 60px;
+
+                    h2 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        margin: 0 56px 0 0;
+                    }
+                }
+
+                &:not(.services__table-item--description):hover {
+                    h2 {
+                        padding-bottom: 25px;
+                    }
+                }
+            }
         }
     }
 }
