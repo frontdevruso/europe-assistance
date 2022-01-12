@@ -1,0 +1,36 @@
+.contacts {
+    padding: 4em 0;
+
+    background: center / contain no-repeat url('./../images/svg/contacts-bg.svg') $darkBlue;
+    background-size: 800px 100%;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__info {
+        color: white;
+        margin-right: 3.5em;
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.5em;
+            font-family: 'GothamPro', sans-serif;
+
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 160%;
+            margin-bottom: 1.5em;
+        }
+        
+        a {
+            font-weight: 700;
+            font-size: 1.5em;
+            font-family: 'GothamPro', sans-serif;
+        }
+    }
+}

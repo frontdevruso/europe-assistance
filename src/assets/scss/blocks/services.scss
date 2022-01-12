@@ -32,7 +32,6 @@
                 
                 height: 21%;
                 background: linear-gradient(180deg, rgba(130, 148, 173, 0.4) 0%, rgba(130, 148, 173, 0.4) 100%);
-                backdrop-filter: blur(10px);
                 transition: .4s;
 
                 h2 {
@@ -58,7 +57,6 @@
             &:not(.services__table-item--description):hover {
                 .services__table-item-info {
                     height: 100%;
-                    backdrop-filter: blur(0);
                     background: $darkBlue;
                 }
 
@@ -76,7 +74,6 @@
                 .services__table-item-info {
                     height: 100%;
                     background: #F0F0F0;
-                    backdrop-filter: blur(0);
                     color: $lightBlack;
                     
                     h2 {
@@ -96,9 +93,7 @@
                 &-info {
                     padding: 0 60px;
 
-                    h2 {
-                        font-size: 30px;
-                    }
+                    h2 {font-size: 30px;}
 
                     p {
                         font-size: 18px;
@@ -107,8 +102,12 @@
                 }
 
                 &:not(.services__table-item--description):hover {
-                    h2 {
-                        padding-bottom: 25px;
+                    h2 {padding-bottom: 25px;}
+                }
+
+                &--description {
+                    .services__table-item-info { 
+                        h2 {padding-bottom: 25px;}
                     }
                 }
             }
