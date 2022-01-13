@@ -1,1 +1,1 @@
-require('fslightbox');
+import fslightbox from 'fslightbox';
