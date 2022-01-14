@@ -38,6 +38,10 @@ input:focus, textarea:focus {
     outline: none;
 }
 
+.none {
+    display: none !important;
+}
+
 .g-heading {
     font-weight: 900;
     font-size: 40px;
