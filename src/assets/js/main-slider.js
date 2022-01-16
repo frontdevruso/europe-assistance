@@ -3,8 +3,17 @@ new Swiper(".main-slider", {
     spaceBetween: 10,
     loop: true,
 
-    navigation: {
-        nextEl: ".main-slider-pagination-arrow--next",
-        prevEl: ".main-slider-pagination-arrow--prev",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    breakpoints: {
+      575: {
+        navigation: {
+          nextEl: ".main-slider-pagination-arrow--next",
+          prevEl: ".main-slider-pagination-arrow--prev",
+        },
       },
+    }
 });

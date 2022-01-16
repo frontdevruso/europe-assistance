@@ -2,54 +2,6 @@
     position: relative;
     background-color: white;
 
-    &-pagination {
-        width: calc(100% - 30px);
-        height: 100%;
-
-        display: flex;
-
-        position: absolute;
-        top: 0;right: 0;left: 0;bottom: 0;
-
-        @include make-container(1620px);
-        
-        &-arrow {
-            padding: 0;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-
-            width: 3em;
-            height: 3em;
-
-            position: absolute;
-            z-index: 10;
-            top: 50%;
-            transform: translateY(-50%);
-
-            transition: .4s;
-
-            svg {
-                width: 0.45em;
-                height: 0.7em;
-            }
-
-            &--prev {
-                left: 0;
-            }
-
-            &--next {
-                right: 0;
-                svg {
-                    transform: rotate(180deg);
-                }
-            }
-
-            &:hover {
-                background-color: $spanishRed;
-            }
-        }
-    }
-
     &-item {
         width: 100%;
         height: calc(100vh - 7.5em);
@@ -67,6 +19,27 @@
             height: 100%;
 
             @include make-container(1200px);
+
+            @media (max-width: 1630px) {
+                font-size: 0.8em;
+                margin-left: 10em;
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 0.6em;
+            }
+
+            @media (max-width: 768px) {
+                margin-left: 7em;
+            }
+
+            @media (max-width: 575px) {
+                margin-left: 4em;
+            }
+
+            @media (max-width: 500px) {
+                margin-left: 0;
+            }
         }
 
         &-tag {
@@ -112,6 +85,22 @@
             font-size: 3em;
 
             line-height: 1;
+
+            max-width: 900px;
+
+            @media (max-width: 768px) {
+                max-width: 80%;
+            }
+
+            @media (max-width: 575px) {
+                font-size: 2.14em;
+            }
+
+            @media (max-width: 500px) {
+                max-width: none;
+                padding-right: 1.5em;
+                font-size: 28px;
+            }
         }
 
         p {
@@ -122,8 +111,10 @@
             max-width: 29.4em;
             line-height: 160%;
 
-            span {
-                font-weight: 500;
+            span { font-weight: 500; }
+
+            @media (max-width: 500px) {
+                padding-right: 1.5em;
             }
         }
         
@@ -164,6 +155,23 @@
                     fill: $spanishRed;
                 }
             }
+        }
+
+        @media (max-width: 1630px) {
+            min-height: 30em;
+            height: auto;
+        }
+
+        @media (max-width: 1024px) {
+            min-height: 20em;
+        }
+
+        @media (max-width: 575px) {
+            min-height: 15em;
+        }
+
+        @media (max-width: 400px) {
+            min-height: 18em;
         }
     }
 }

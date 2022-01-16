@@ -1,0 +1,80 @@
+.g-arrows-pagination {
+    width: calc(100% - 30px);
+    height: 100%;
+
+    display: flex;
+
+    position: absolute;
+    top: 0;right: 0;left: 0;bottom: 0;
+
+    @include make-container(1620px);
+    padding: 0;
+    
+    &-arrow {
+        padding: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+
+        width: 3em;
+        height: 3em;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+
+        transition: .4s;
+
+        svg {
+            width: 0.45em;
+            height: 0.7em;
+        }
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:hover {
+            background-color: $spanishRed;
+        }
+
+        @media (max-width: 1024px) {
+            width: 2em;
+            height: 2em;
+
+            svg {
+                width: 0.3em;
+                height: 0.45em;
+            }
+        }
+
+        @media (max-width: 575px) {
+            top: initial;
+            bottom: 1.5em;
+            transform: none;
+
+            background-color: rgba(255, 255, 255, 0.5);
+
+            svg { fill: #ffffff; }
+        }
+    }
+
+    @media (max-width: 1630px) {
+        margin: 0 15px;
+    }
+
+    @media (max-width: 575px) {
+        &--main { display: none; }
+    }
+}

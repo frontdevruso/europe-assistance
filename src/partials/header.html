@@ -46,7 +46,9 @@
 
     <nav class="header__nav">
         <div class="header__nav-container container__1200px">
-            <img class="header__nav-logo" src="./assets/images/svg/logo.svg" alt="">
+            <a href="./index.html">
+                <img class="header__nav-logo" src="./assets/images/svg/logo.svg" alt="">
+            </a>
             <ul class="header__nav-links">
                 <a href="">Медицина</a>
                 <a href="">Авто</a>
@@ -54,12 +56,45 @@
                 <a href="">Цифровая защита</a>
                 <a href="">Помощь на дому</a>
             </ul>
-
             <div class="header__nav-search">
                 <div class="header__nav-search-wrapper">
                     <svg id="headerSearchIcon"><use xlink:href="./assets/images/svg/search-icon.svg#searchIcon"></use></svg>
                     <input id="headerSearch" type="text" placeholder="Поиск">
                 </div>
+            </div>
+
+            <!-- MOBILE BUTTONS -->
+
+            <button class="language__switcher language__switcher--mb nav__mb-item">
+                <main>
+                    <span>RU</span>
+                    <svg width="7" height="4" viewBox="0 0 7 4" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.4">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.19999 3.33335L7 0.666666L6.3 -3.69632e-08L3.49999 2.66668L0.699998 1.40361e-05L-1.45704e-07 0.666681L3.50001 4L2.80001 3.33333L3.49999 2.66668L4.19999 3.33335Z" />
+                        <path d="M2.80001 3.33333L3.50001 4L4.19999 3.33335L3.49999 2.66668L2.80001 3.33333Z" />
+                        </g>
+                    </svg>
+                </main>
+
+                <a href="" class="language__switcher-select">
+                    <span>EN</span>
+                </a>
+            </button>
+
+            <a href="" class="header__nav-phone nav__mb-item">
+                <svg id="phoneIcon" width="100%" height="100%" viewBox="0 0 12 12" fill="#808080" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.000302757 2.56811C0.000302757 2.56811 -0.0260046 1.87828 0.411836 0.985647C0.7207 0.354359 1.92306 0.00562895 1.92306 0.00562895C1.92306 0.00562895 2.43727 -0.125043 3.47077 0.8728C3.88158 1.25305 4.14282 1.7677 4.2073 2.32374C4.24463 2.83115 3.16276 3.91299 3.16276 3.91299C3.24649 4.53414 3.50584 5.11848 3.91031 5.59729C4.33543 6.09196 5.0677 6.86325 5.45208 7.22386C5.78131 7.53272 6.14871 7.93577 6.63746 8.2599C7.59884 8.89712 7.82966 8.83942 7.82966 8.83942C7.82966 8.83942 9.19918 7.69224 9.60902 7.73212C9.92043 7.76351 10.3617 7.96885 10.9259 8.44995C11.3451 8.80632 11.6132 9.07616 11.8237 9.43592C11.8986 9.56014 11.9576 9.69327 11.9993 9.83218C11.9993 9.83218 12.0545 10.4015 11.1703 11.3077C10.2904 12.208 9.07698 11.9721 9.07698 11.9721C9.07698 11.9721 8.37948 11.8686 7.23821 11.3315C5.97462 10.7153 4.82333 9.8916 3.83223 8.89459C2.90734 7.93917 1.6948 6.47718 1.10508 5.45982C0.362615 4.18112 0.000302757 2.56811 0.000302757 2.56811Z" />
+                </svg>
+            </a>
+            <a href="" class="header__nav-search-btn nav__mb-item">
+                <svg id="headerSearchIcon"><use xlink:href="./assets/images/svg/search-icon.svg#searchIcon"></use></svg>
+            </a>
+            
+            <div class="header__burger">
+                <button class="btn-reset burger" aria-label="Бургер меню">
+                    <span></span>
+                    <svg x="0" y="0" width="54px" height="54px" viewbox="0 0 54 54"></svg>
+                </button>
             </div>
         </div>
     </nav>
