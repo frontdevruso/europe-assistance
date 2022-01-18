@@ -16,6 +16,22 @@ body {
     min-width: 320px;
 }
 
+.m-open {
+    overflow: hidden;
+
+    .header {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 50;
+        top: 0;
+
+        .menu {
+            display: block;
+        }
+    }
+}
+
 @import 'fonts';
 @import 'global';
 
@@ -36,3 +52,4 @@ body {
 @import './blocks/burger.scss';
 @import './blocks/pagination-dots.scss';
 @import './blocks/pagination-arrows.scss';
+@import './blocks/mobile-menu.scss';

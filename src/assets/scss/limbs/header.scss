@@ -9,13 +9,8 @@
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 1230px) {
-        font-size: 18px;
-    }
-
-    @media (max-width: 1150px) {
-        font-size: 16px;
-    }
+    @media (max-width: 1230px) { font-size: 18px }
+    @media (max-width: 1150px) { font-size: 16px }
 }
 
 .header__burger {
@@ -85,6 +80,43 @@
                 margin: 0;
             }
         }
+
+        &--menu {
+            &:hover {
+                color: #999999;
+                text-decoration: underline;
+    
+                svg {
+                    fill: #999999;
+                }
+            }
+            @media (max-width: 768px) {
+                display: flex;
+                align-items: center;
+                span { 
+                    display: flex;
+                    color: #999999; 
+                    font-size: 0.75em;
+                }
+                svg {
+                    width: 0.7em;
+                    height: 0.7em;
+
+                    margin-right: 0.2em;
+                }
+            }
+
+            @media (max-width: 400px) {
+                span { font-size: 0.7em }
+                svg {
+                    width: 0.6em;
+                    height: 0.45em;
+
+                    margin-top: 0.1em;
+                    margin-right: 0.25em;
+                }
+            }
+        }
     }
 
     &-phone {
@@ -113,6 +145,49 @@
                 width: 0.8em;
                 height: 0.8em;
                 margin: 0;
+            }
+        }
+
+        &--menu {
+            &:hover {
+                color: #999999;
+                text-decoration: underline;
+    
+                svg {
+                    fill: #999999;
+                }
+            }
+            @media (max-width: 768px) {
+                display: flex;
+                align-items: center;
+
+                span { 
+                    display: flex;
+                    color: #999999;
+                    font-size: 0.75em;
+                }
+                svg {
+                    width: 0.7em;
+                    height: 0.7em;
+
+                    margin-right: 0.2em;
+                }
+            }
+
+            @media (max-width: 500px) {
+                margin-bottom: 0.5em;
+            }
+
+            @media (max-width: 400px) {
+
+                span { font-size: 0.9em }
+
+                svg {
+                    width: 0.6em;
+                    height: 0.6em;
+
+                    margin-right: 0.25em;
+                }
             }
         }
     }
@@ -154,6 +229,26 @@
                 font-size: 0.7em;
             }
         }
+
+        &--menu {
+            width: auto;
+            padding: 0.6em 0.8em;
+
+            margin-right: 0.5em;
+
+            span {
+                font-size: 0.6em;
+            }
+
+            @media (max-width: 500px) {
+                margin-right: 0;
+                margin-bottom: 0.75em;
+            }
+
+            @media (max-width: 400px) {
+                padding: 0.8em;
+            }
+        }
     }
 
     &-account {
@@ -188,6 +283,27 @@
 
         @media (max-width: 1230px) {
             width: 80%;
+        }
+
+        &--menu {
+            padding: 0.6em 0.8em;
+            background-color: $darkBlue;
+
+            span {
+                font-size: 0.6em;
+            }
+
+            @media (max-width: 500px) {
+                width: initial;
+            }
+
+            @media (max-width: 400px) {
+                padding: 0.8em;
+                svg {
+                    width: 0.55em;
+                    width: 0.6em;
+                }
+            }
         }
     }
 
