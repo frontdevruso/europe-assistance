@@ -105,7 +105,8 @@ input:focus, textarea:focus, button:focus {
   line-height: 1;
   font-size: 0.7em;
   font-family: 'Roboto', sans-serif;
-  transition: .4s; }
+  transition: .4s;
+  appearance: none; }
   .g-input::placeholder {
     color: #A6A6A6; }
   .g-input:focus::placeholder {
