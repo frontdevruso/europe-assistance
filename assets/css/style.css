@@ -1568,7 +1568,10 @@ input:focus, textarea:focus, button:focus {
         .contacts__form-wrapper {
           display: flex;
           flex-direction: column;
-          width: auto; } }
+          width: auto;
+          grid-gap: 0; }
+          .contacts__form-wrapper input:not(:last-child) {
+            margin-bottom: 0.75em; } }
     .contacts__form textarea {
       resize: none;
       display: flex;
