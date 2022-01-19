@@ -136,6 +136,10 @@
                 display: flex;
                 flex-direction: column;
                 width: auto;
+
+                grid-gap: 0;
+
+                input:not(:last-child) { margin-bottom: 0.75em }
             }
         }
 
@@ -143,8 +147,8 @@
             resize: none;
             display: flex;
 
-            width: calc(100% - 3em);
-            height: 10em;
+            width: 100%;
+            height: 13em;
 
             @media (max-width: 500px) {
                 height: calc(180px - 3em);
