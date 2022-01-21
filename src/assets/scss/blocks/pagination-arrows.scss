@@ -32,6 +32,8 @@
         svg {
             width: 0.45em;
             height: 0.7em;
+
+            transition: .4s;
         }
 
         &--prev {
@@ -59,14 +61,48 @@
             }
         }
 
+        // @media (max-width: 575px) {
+        //     top: initial;
+        //     bottom: 1.5em;
+        //     transform: none;
+
+        //     background-color: rgba(255, 255, 255, 0.5);
+
+        //     svg { fill: #ffffff; }
+        // }
+    }
+
+    &--medicine {
+        @include make-container(1500px);
+        padding: 0;
+
+        button {
+            background-color: white;
+            width: 2.5em;
+            height: 2.5em;
+
+            svg {
+                width: 0.45em;
+                height: 0.7em;
+            }
+
+            &:hover {
+                svg {
+                    fill: white;
+                }
+            }
+        }
+
         @media (max-width: 575px) {
-            top: initial;
-            bottom: 1.5em;
-            transform: none;
+            button {
+                width: 1.5em;
+                height: 1.5em;
 
-            background-color: rgba(255, 255, 255, 0.5);
-
-            svg { fill: #ffffff; }
+                svg {
+                    width: 0.25em;
+                    height: 0.4em;
+                }
+            }
         }
     }
 

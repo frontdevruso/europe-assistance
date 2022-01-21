@@ -352,16 +352,19 @@
     &-logo {
         display: inherit;
 
-        width: 4.15em;
-        height: 3.5em;
+        img {
+            width: 4.15em;
+            height: 3.5em;
+        }
 
-        padding-right: 2.5em;
-        margin-right: auto;
+        margin-right: 2.5em;
 
         @media (max-width: 900px) {
-            width: 3em;
-            height: 2.5em;
-            padding-right: 1.5em;
+            img {
+                width: 3em;
+                height: 2.5em;
+            }
+            margin-right: 1.5em;
         }
 
         @media (max-width: 768px) {

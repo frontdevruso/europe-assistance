@@ -1,0 +1,125 @@
+.medicine-preview {
+    background-color: $darkBlue;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+    position: relative;
+    display: flex;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 6.9em 0;
+
+        width: 50%;
+
+        a {
+            @media (max-width: 400px) {
+                width: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 950px) {
+            width: 100%;
+            padding: 3.3em 0;
+
+            font-size: 0.9em;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 575px) {
+            width: 100%;
+            font-size: 0.8em;
+
+            padding: 1.5em 0;
+        }
+    }
+
+    &__heading {
+        font-family: 'GothamPro', sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+
+        margin-bottom: 0.33em;
+
+        @media (max-width: 575px) {
+            font-size: 2em;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 1.5em;
+        }
+    }
+
+    &__desc {
+        font-size: 0.9em;
+        font-weight: 300;
+        line-height: 160%;
+
+        padding-bottom: 1.1em;
+        margin-right: 3.2em;
+        border-bottom: 0.05em solid rgba(255, 255, 255, 0.1);
+
+        @media (max-width: 950px) {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        @media (max-width: 400px) {
+            width: 100%;
+            font-size: 0.8em;
+        }
+    }
+
+    &__helpful {
+        font-size: 0.9em;
+        font-weight: 300;
+        margin-top: 1.38em;
+
+        @media (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 50%;
+        height: 100%;
+
+        max-width: 960px;
+        margin-right: auto;
+
+        position: absolute;
+        right: 0;
+
+        background: center center / cover no-repeat;
+
+        @media (max-width: 950px) {
+            width: 100%;
+            height: 400px;
+
+            position: static;
+            right: initial;
+        }
+
+        @media (max-width: 575px) {
+            height: 300px;
+        }
+
+        @media (max-width: 400px) {
+            height: 220px;
+        }
+    }
+
+    @media (max-width: 1230px) {
+        font-size: 0.8em;
+    }
+
+    @media (max-width: 950px) {
+        font-size: 1em;
+        flex-direction: column-reverse;
+    }
+}

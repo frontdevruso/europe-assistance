@@ -104,3 +104,42 @@ input:focus, textarea:focus, button:focus {
         fill: #FF0000;
     }
 }
+
+.g-red-link {
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+    font-family: 'GothamPro', sans-serif;
+    font-weight: 700;
+
+    margin-top: 1.6em;
+    padding: 0.8em 2.5em;
+    background-color: $spanishRed;
+
+    transition: .4s;
+
+    svg {
+        width: 1em;
+        height: 0.6em;
+
+        margin-top: 0.1em;
+        margin-right: 0.5em;
+
+        fill: white;
+        transition: .4s fill;
+    }
+
+    span {
+        font-size: 0.8em;
+        line-height: 150%;
+    }
+
+    &:hover {
+        color: $spanishRed;
+        background-color: white;
+        svg {
+            fill: $spanishRed;
+        }
+    }
+}
