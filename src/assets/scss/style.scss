@@ -32,21 +32,6 @@ body {
     }
 }
 
-.some__text {
-    width: 60px;
-    height: 50px;
-
-    font-size: 50px;
-    font-weight: 900;
-    background-image: url('./../images/svg/numbers-bg.svg');
-    background-size: 180% 180%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 @import 'fonts';
 @import 'global';
 
@@ -72,3 +57,4 @@ body {
 @import './blocks/medicine-slider.scss';
 @import './blocks/accordion.scss'; 
 @import './blocks/video.scss'; 
+@import './blocks/official-partner.scss'; 
