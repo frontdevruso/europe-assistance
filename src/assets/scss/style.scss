@@ -32,6 +32,12 @@ body {
     }
 }
 
+.account-page {
+    .footer {
+        background-color: white;
+    }
+}
+
 @import 'fonts';
 @import 'global';
 
@@ -58,3 +64,4 @@ body {
 @import './blocks/accordion.scss'; 
 @import './blocks/video.scss'; 
 @import './blocks/official-partner.scss'; 
+@import './blocks/account-panel.scss'; 

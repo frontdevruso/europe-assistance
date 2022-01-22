@@ -1,0 +1,127 @@
+.account-panel {
+    padding: 7em 0 5.9em;
+    text-align: center;
+
+    background-color: #F0F0F0;
+
+    @media (max-width: 1230px) {
+        padding: 4em 0 2.5em;
+    }
+
+    @media (max-width: 575px) {
+        padding: 1.5em 0;
+    }
+
+    &__heading {
+        font-size: 2em;
+        font-weight: 700;
+
+        margin-bottom: 1.5em;
+        span { color: $spanishRed }
+
+        @media (max-width: 768px) {
+            font-size: 1.8em;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 1.3em;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 1em;
+            margin-bottom: 0.75em;
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 0.75em;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            transition: .4s box-shadow, color;
+            background-color: white;
+            padding: 2.5em 2.8em;
+
+            h2 {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 1.2em;
+
+                margin-top: 1.25em;
+                transition: .4s color;
+            }
+
+            &:nth-child(1) {
+                img {
+                    width: 7.9em;
+                    height: 6.65em;
+                }
+            }
+
+            &:nth-child(2) {
+                img {
+                    width: 5.9em;
+                    height: 6.55em;
+                }
+            }
+
+            &:nth-child(3) {
+                img {
+                    width: 7.9em;
+                    height: 6.65em;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 3.2em 6.7em rgba(0, 0, 0, 0.1);
+                h2 { color: $spanishRed }
+            }
+
+            @media (max-width: 1024px) {
+                margin: 0 auto 0.5em;
+                max-width: 18.3em;
+                width: 100%;
+            }
+
+            @media (max-width: 575px) {
+                max-width: 17em;
+            }
+
+            @media (max-width: 400px) {
+                max-width: none;
+                box-sizing: border-box;
+
+                padding: 15px 20px;
+                margin: 0 auto 0.05em;
+
+                img { font-size: 0.53em }
+                h2 { font-size: 14px }
+            }
+        }
+
+        @media (max-width: 1230px) {
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            grid-column-gap: 0;
+
+            font-size: 1em;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 0.8em;
+        }
+    }
+}
