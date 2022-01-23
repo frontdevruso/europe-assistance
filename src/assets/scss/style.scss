@@ -17,25 +17,32 @@ body {
 }
 
 .m-open {
-    overflow: hidden;
+    @media (max-width: 768px) { 
+        overflow: hidden;
 
-    .header {
-        height: 100vh;
-        width: 100%;
-        position: fixed;
-        z-index: 50;
-        top: 0;
+        .header {
+            height: 100vh;
+            min-height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 50;
+            top: 0;
 
-        .menu {
-            display: block;
+            .menu {
+                display: block;
+            }
         }
     }
 }
 
-.account-page {
+.light-page {
     .footer {
         background-color: white;
     }
+}
+
+.gray-page {
+    background-color: #F0F0F0;
 }
 
 @import 'fonts';
@@ -50,6 +57,9 @@ body {
 @import './blocks/experience.scss';
 @import './blocks/services.scss';
 @import './blocks/certificates.scss';
+@import './blocks/blog-default.scss';
+@import './blocks/blog-item.scss';
+@import './blocks/blog-article.scss';
 @import './blocks/blog.scss';
 @import './blocks/contacts.scss';
 @import './blocks/card360deg.scss';
@@ -61,7 +71,9 @@ body {
 @import './blocks/mobile-menu.scss';
 @import './blocks/medicine-preview.scss';
 @import './blocks/medicine-slider.scss';
-@import './blocks/accordion.scss'; 
-@import './blocks/video.scss'; 
-@import './blocks/official-partner.scss'; 
-@import './blocks/account-panel.scss'; 
+@import './blocks/accordion.scss';
+@import './blocks/video.scss';
+@import './blocks/official-partner.scss';
+@import './blocks/account-panel.scss';
+@import './blocks/policy.scss';
+@import './blocks/breadcumps.scss';

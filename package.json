@@ -32,6 +32,7 @@
         "> 1%",
         "IE 10"
     ],
+    "liveSassCompile.settings.autoprefix": null,
     "dependencies": {
         "autoprefixer": "^9.8.6",
         "fslightbox": "^3.3.1",

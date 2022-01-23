@@ -98,10 +98,9 @@ function css(cb) {
         .pipe(cssnano({
             zindex: false,
             discardComments: {
-                removeAll: true
+                removeAll: false
             }
         }))
-        .pipe(removeComments())
         .pipe(rename({
             suffix: ".min",
             extname: ".css"

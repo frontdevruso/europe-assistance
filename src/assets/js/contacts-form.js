@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         const formAllInput = document.querySelectorAll('[data-validate-field]');
         const contactFormSubmitBtn = document.getElementById('contactFormBtn');
-        const selectBox = document.getElementById('select-box');
+        const selectBox = document.getElementById('selectBoxForm');
         const card360deg = document.querySelector('.card360deg');
     
         let regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     
-        const selected = document.querySelector(".select-box-current");
-        const optionsContainer = document.querySelector(".options-container");
-        const selectArrow = document.querySelector(".select-box-arrow");
-        const optionsList = document.querySelectorAll(".option");
+        const selected = document.getElementById("selectBoxCurrent");
+        const optionsContainer = document.getElementById("optionsContainer");
+        const selectArrow = document.getElementById("selectBoxArrow");
+        const optionsList = document.querySelectorAll(".option--form");
     
         document.addEventListener('click', (event) => {
-            let isClickInsideElement = selected.contains(event.target);
+            let isClickInsideElement = selected.contains(event.target); 
             if (!isClickInsideElement) {
                 optionsContainer.classList.remove("active");
                 selectArrow.classList.remove("select-box-arrow-opened");

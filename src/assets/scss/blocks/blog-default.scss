@@ -1,0 +1,97 @@
+.blog {
+    padding: 4.167vw 0;
+    background-color: #F5F5F5;
+    
+
+    @media (min-width: 1920px) {
+        padding: 4em 0;
+    }
+
+    &__container {
+        @include make-container(1860px);
+        padding: 0 1.563vw;
+    }
+
+    &__heading {
+        margin-bottom: 1em;
+
+        @media (max-width: 1230px) { padding: 0;}
+
+        @media (max-width: 768px) {
+            font-size: 1.5em;
+            margin-bottom: 0.75em;
+        }
+
+        @media (max-width: 400px) { 
+            font-size: 1.2em;
+            margin-bottom: 0.6em;
+        }
+    }
+
+    &__table {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-auto-rows: auto;
+        grid-gap: 1.042vw;
+
+        width: auto;
+        height: 30.208vw;
+
+        @media (min-width: 1920px) {
+            grid-gap: 20px;
+            height: 580px;
+
+            &-item {
+                width: 580px;
+    
+                &--long {
+                    width: 320px;
+
+                    .blog__table-item-img {
+                        width: auto;
+                        height: 457px;
+    
+                        img {
+                            width: 320px;
+                            height: 457px;
+                        }
+                    }
+                }
+
+                &-info {
+                    padding: 30px 25px 30px 30px;
+                    data {font-size: 12px;}
+                    h3 {font-size: 16px;}
+                }
+
+                &-img {
+                    height: 280px;
+    
+                    &-tag {
+                        padding: 4px 10px;
+                        font-size: 12px;
+                    }
+
+                    img {
+                        width: 270px;
+                        height: inherit;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1230px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            height: auto;
+        }
+    }
+}

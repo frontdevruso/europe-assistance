@@ -133,6 +133,10 @@
             @media (max-width: 400px) {
                 height: 75vw;
             }
+
+            @media (max-width: 320px) {
+                height: 240px;
+            }
         }
 
         @media (max-width: 1024px) {
