@@ -98,7 +98,7 @@ function css(cb) {
         .pipe(cssnano({
             zindex: false,
             discardComments: {
-                removeAll: false
+                removeAll: true
             }
         }))
         .pipe(rename({
