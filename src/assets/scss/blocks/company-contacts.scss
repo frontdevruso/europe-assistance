@@ -1,0 +1,86 @@
+.company-contacts {
+    background-color: $darkBlue;
+    color: white;
+
+    padding: 4em 0;
+
+    &__container {
+        display: flex;
+    }
+
+    &__info {
+        background-color: white;
+        color: $lightBlack;
+
+        padding: 4em;
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 0.416em;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: $darkBlue;
+                font-size: 0.6em;
+                font-weight: 800;
+
+                text-transform: uppercase;
+                line-height: 160%;
+            }
+
+            p {
+                max-width: 430px;
+                font-size: 0.9em;
+
+                line-height: 160%;
+            }
+
+            a { line-height: 160% }
+            .phone {
+                font-size: 1em;
+                font-weight: 700;
+
+                display: flex;
+
+                &::after {
+                    content: "(круглосуточно)";
+                    display: flex;
+                    margin-top: 0.2em;
+                    margin-left: 0.3em;
+
+                    font-size: 0.7em;
+                    font-weight: 500;
+                }
+            }
+
+            .mail {
+                text-decoration: underline;
+                font-size: 0.9em;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1.25em;
+            }
+        }
+
+        .g-red-link {
+            color: white;
+            border: 0.05em solid $spanishRed;
+            padding: 0.8em 3.1em;
+
+            &:hover {
+                color: $spanishRed;
+            }
+        }
+    }
+}

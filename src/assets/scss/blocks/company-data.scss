@@ -1,0 +1,105 @@
+.company-data {
+    background-color: #F0F0F0;
+    padding: 4em 0;
+
+    @media (max-width: 1200px) {
+        padding: 2em 0;
+    }
+
+    @media (max-width: 575px) {
+        padding: 1.5em 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__law {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.2em;
+
+        border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
+
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.833em;
+        }
+
+        span {
+            font-family: 'GothamPro', sans-serif;
+            font-size: 1em;
+            font-weight: 500;
+
+            display: flex;
+            max-width: 36.7em;
+            line-height: 120%;
+            margin-bottom: 1.2em;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 0.7em;
+            h1 { margin-bottom: 0.5em }
+        }
+    }
+
+    &__address {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            
+            span {
+                color: $darkBlue;
+                font-size: 0.6em;
+                font-weight: 700;
+
+                text-transform: uppercase;
+                margin-bottom: 0.416em;
+            }
+
+            p {
+                font-size: 0.9em;
+                line-height: 160%;
+
+                display: flex;
+
+                max-width: 32.22em;
+            }
+
+            &:not(:last-child) {
+                margin-right: 2em;
+            }
+
+            @media (max-width: 1200px) {
+                p { max-width: 25em; }
+                &:not(:last-child) { margin-right: 1em }
+            }
+
+            @media (max-width: 992px) {
+                font-size: 0.9em;
+                p { max-width: 20em; }
+            }
+
+            @media (max-width: 768px) {
+                &:first-child { width: 100%; margin-bottom: 1em;}
+                font-size: 1.2em;
+
+                p { max-width: 28em; }
+                &:not(:last-child) { margin-right: 0 }
+            }
+
+            @media (max-width: 575px) {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            font-size: 0.8em;
+        }
+    }
+}
