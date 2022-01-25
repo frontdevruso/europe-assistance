@@ -1,0 +1,171 @@
+.preview-about {
+    background-color: $darkBlue;
+    color: white;
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        position: relative;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        padding: 8.75em 0;
+        max-width: 566px;
+        width: 100%;
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            font-family: 'GothamPro', sans-serif;
+
+            margin-bottom: 0.333em;
+
+            @media (max-width: 400px) {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 0.9em;
+            line-height: 160%;
+
+            padding-bottom: 2.22em;
+            margin-bottom: 2.22em;
+            border-bottom: 0.05em solid rgba(255, 255, 255, 0.1);
+
+            max-width: 512px;
+            span { font-weight: 500 }
+
+            @media (max-width: 1200px) { max-width: 700px }
+            @media (max-width: 400px) {
+                font-size: 12px;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+    
+                span {
+                    font-weight: 700;
+                    font-size: 0.7em;
+
+                    @media (max-width: 400px) {
+                        font-size: 10px;
+                    }
+                }
+
+                h3 {
+                    font-size: 2em;
+                    font-weight: 700;
+
+                    font-family: 'GothamPro', sans-serif;
+                    line-height: 140%;
+
+                    display: flex;
+                    white-space: nowrap;
+
+                    &::after {
+                        content: "сертифицированных партнеров";
+                        display: flex;
+                        margin-top: auto;
+
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 290%;
+
+                        margin-left: 4px;
+
+                        @media (max-width: 400px) {
+                            margin-left: 0;
+                            font-size: 10px;
+                            line-height: 150%;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                    }
+
+                    @media (max-width: 400px) {
+                        font-size: 24px;
+                        line-height: 150%;
+                    }
+                }
+
+                .second-h::after { content: "странах мира" }
+
+                @media (max-width: 768px) {
+                    &:first-child { margin-right: 40% }
+                }
+
+                @media (max-width: 575px) {
+                    &:first-child { margin-right: 10% }
+                }
+
+                @media (max-width: 400px) {
+                    &:first-child { margin-right: 10% }
+                }
+            }
+
+            @media (max-width: 768px) { justify-content: start }
+        }
+
+        @media (max-width: 1200px) {
+            padding: 1em 15px;
+            max-width: 700px;
+
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 575px) { font-size: 0.8em }
+        @media (max-width: 400px) { padding: 15px 15px 27px }
+    }
+
+    &__picture {
+        position: absolute;
+        top: 50%;
+        left: 42%;
+        transform: translateY(-50%);
+
+        width: 996px;
+        height: 569px;
+
+        @media (max-width: 1200px) {
+            position: static;
+            top: initial;
+            left: initial;
+            transform: initial;
+
+            width: 100%;
+            height: 100%;
+
+            padding: 2em 2em 0;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 575px) {
+            padding: 1.5em 0.75em 0;
+        }
+    }
+}

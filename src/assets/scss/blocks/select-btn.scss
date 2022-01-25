@@ -19,8 +19,9 @@
         left: -1px;
         font-size: 0.7em;
     
-        background: #dbdbdb;
-        border: 0.05em solid #dbdbdb;
+        background: #ececec;
+        border: 0.05em solid #ececec;
+        box-shadow: -6px 64px 134px rgba(0, 0, 0, 0.1);
         
         max-height: 0;
         width: 100%;
@@ -78,7 +79,7 @@
 
         order: 0;
 
-        @media (max-width: 500px) { padding: 16.6px }
+        @media (max-width: 500px) { padding: 16.6px; line-height: 1.35 }
     }
 
     &-arrow {

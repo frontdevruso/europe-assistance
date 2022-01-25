@@ -2,6 +2,40 @@
 <html lang="en">
 <head>
     {{> emptyHead }}
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=518b218a-931c-4bf4-81c6-28d2d4aeabd5&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        let center = [55.727273, 37.647109];
+
+        function init() {
+            //eslint-disable-next-line
+            let map = new ymaps.Map('map', {
+                center: center,
+                zoom: 17
+            });
+
+            //eslint-disable-next-line
+            let placemark = new ymaps.Placemark(center, {
+                balloonContent: null,
+            }, {
+                iconLayout: "default#image",
+                iconImageHref: "./assets/images/svg/marker.svg",
+                iconImageSize: [26, 35],
+            });
+
+            map.controls.remove("geolocationControl");
+            map.controls.remove("searchControl");
+            map.controls.remove("trafficControl");
+            map.controls.remove("typeSelector");
+            map.controls.remove("fullscreenControl");
+            map.controls.remove("zoomControl");
+            map.controls.remove("rulerControl");
+            map.behaviors.disable(["scrollZoom"]);
+
+            map.geoObjects.add(placemark);
+        }
+
+        window.ymaps?.ready(init);
+    </script>
 </head>
 <body class="">
     <div class="gray-page">
