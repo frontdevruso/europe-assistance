@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if(e.target.closest(".accordion__item-btn")) {
                     icon.classList.toggle("accordion__icon--open");
                     content.classList.toggle("accordion__item-content--open");
+                    control.classList.toggle("accordion__item-btn--open");
                     paragraph.classList.toggle("accordion__item-btn-paragraph--open");
                 }
             }
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (e.target.closest(".accordion__item-btn-paragraph")) return
                     icon.classList.toggle("accordion__icon--open");
                     content.classList.toggle("accordion__item-content--open");
+                    control.classList.toggle("accordion__item-btn--open");
                     paragraph.classList.toggle("accordion__item-btn-paragraph--open");
                 }
             }

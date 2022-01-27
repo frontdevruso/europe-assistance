@@ -7,6 +7,10 @@
         padding: 4em 0;
     }
 
+    @media (max-width: 400px) {
+        padding: 1.5em 0 1.5em;
+    }
+
     &__container {
         @include make-container(1860px);
         padding: 0 1.563vw;

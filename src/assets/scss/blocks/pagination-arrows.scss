@@ -113,4 +113,53 @@
     @media (max-width: 575px) {
         &--main { display: none; }
     }
+
+    &--media {
+        @include make-container(1340px);
+        .media-pagination-arrow {
+            background-color: white;
+            svg { fill: $darkBlue }
+
+            &:hover {
+                background-color: $spanishRed;
+                svg { fill: white }
+            }
+        }
+
+        @media (max-width: 1340px) { 
+            @include make-container(110px);
+            .media-pagination-arrow {
+                bottom: -80px;
+                transform: initial;
+                top: initial;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .media-pagination-arrow {
+                width: 3em;
+                height: 3em;
+
+                svg {
+                    width: 0.45em;
+                    height: 0.7em;
+                }
+            }
+        }
+
+        @media (max-width: 500px) {
+            @include make-container(60px);
+            .media-pagination-arrow {
+                bottom: -55px;
+
+                width: 2em;
+                height: 2em;
+
+                svg {
+                    width: 0.3em;
+                    height: 0.45em;
+                }
+            }
+        }
+    }
 }

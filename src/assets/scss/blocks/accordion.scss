@@ -16,6 +16,44 @@
         }
     }
 
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 3em;
+
+        h1 {
+            font-size: 2em;
+            line-height: 120%;
+            max-width: 513px;
+
+            margin-bottom: 0.45em;
+        }
+
+        p {
+            font-size: 0.9em;
+            font-weight: 300;
+            line-height: 160%;
+
+            span {
+                color: $darkBlue;
+                font-weight: 400;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 30px;}
+            p { font-size: 16px;}
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 400px) {
+            h1 { font-size: 20px;}
+            p { font-size: 12px;}
+            margin-bottom: 20px;
+        }
+    }
+
     &__icon {
         display: flex;
         align-items: center;
@@ -98,7 +136,7 @@
             border-radius: 0;
             appearance: none;
             padding-top: 2em;
-            padding-bottom: 0;
+            padding-bottom: 1.5em;
 
             h2 {
                 font-size: 1.5em;
@@ -128,25 +166,46 @@
 
                     &--open {
                         display: block !important;
-                        margin-top: 2em;
+                        margin-top: 15px;
                     }
                 }
             }
 
             @media (max-width: 400px) {
-                padding-top: 13px;
-                padding-bottom: 13px;
+                padding-top: 0;
+                padding-bottom: 0;
+                height: 40px;
+
+                &--open {
+                    height: 100%;
+                    padding-bottom: 13px;
+
+                    h2 {
+                        display: flex;
+                        align-items: center;
+                        height: 40px;
+                    }
+                }
             }
         }
 
         &-content {
-            padding-top: 1.5em;
             height: 0;
             opacity: 0;
             overflow: hidden;
 
             @media (max-width: 400px) {
                 padding-top: 0;
+            }
+
+            b {
+                font-weight: 400;
+                font-size: 0.8em;
+                line-height: 160%;
+
+                max-width: 49.2em;
+                padding-bottom: 1.5em;
+                display: block;
             }
 
             &--open {
@@ -168,6 +227,16 @@
                 font-size: 0.9em;
                 
                 padding-bottom: 1.5em;
+
+                span {
+                    color: $darkBlue;
+                    font-weight: 500;
+                }
+
+                &--bb {
+                    border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
+                    margin-bottom: 1.5em;
+                }
             }
 
             &-video {
@@ -213,6 +282,10 @@
                 font-family: 'GothamPro', sans-serif;
 
                 margin-bottom: 0.83em;
+
+                @media (max-width: 400px) {
+                    font-size: 14px;
+                }
             }
 
             &-benefits {
@@ -284,6 +357,115 @@
                     @media (max-width: 400px) {
                         margin: 0;
                         padding: 20px 15px;
+                    }
+                }
+
+                &--rus {
+                    margin: 0 2.25em 2.25em;
+
+                    @media (max-width: 1024px) {
+                        margin: 0;
+                    }
+
+                    .accordion__item-content-ill {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        margin-bottom: 2.5em;
+                        border-bottom: 0.05em solid rgba(255, 255, 255, 0.1);
+
+                        h1 {
+                            width: 100%;
+                            max-width: 500px;
+                            border-bottom: 0;
+
+                            @media (max-width: 768px) {
+                                line-height: 140%;
+                                max-width: 300px;
+                            }
+
+                            @media (max-width: 400px) {
+                                font-size: 20px;
+                                max-width: 200px;
+
+                                margin-bottom: 0;
+                                padding-bottom: 0;
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            margin-bottom: 2.5em;
+
+                            @media (max-width: 1230px) {
+                                width: 46.01vw;
+                            }
+
+                            @media (max-width: 1024px) {
+                                width: 100%;
+                                margin-bottom: 1.5em;
+                            }
+                        }
+
+                        @media (max-width: 1024px) {
+                            justify-content: start;
+                            align-items: start;
+                            flex-direction: column-reverse;
+                        }
+
+                        @media (max-width: 400px) {
+                            border-bottom: none;
+                            padding-bottom: 0;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .accordion__item-content-faq-benefits {
+                        width: 100%;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-column-gap: 2.4em;
+                        grid-row-gap: 2em;
+
+                        @media (max-width: 1024px) {
+                            grid-template-columns: 1fr 1fr;
+                            grid-column-gap: 2em;
+                            grid-row-gap: 1.6em;
+                        }
+
+                        @media (max-width: 500px) {
+                            grid-template-columns: 1fr;
+                        }
+
+                        @media (max-width: 400px) {
+                            margin-bottom: 1em;
+                            grid-row-gap: 15px;
+                        }
+
+                        &-item {
+                            img { margin-top: 0.2em }
+    
+                            main {
+                                h5 {
+                                    font-size: 0.9em;
+                                    font-weight: 700;
+
+                                    line-height: 130%;
+                                    margin-bottom: 0.75em;
+
+                                    @media (max-width: 400px) {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                span {
+                                    @media (max-width: 400px) {
+                                        font-size: 12px;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -436,6 +618,45 @@
                 display: flex;
                 flex-wrap: wrap;
                 margin-bottom: 1.55em;
+
+                &--road {
+                    display: flex;
+                    flex-direction: column;
+
+                    padding-bottom: 1.5em;
+                    border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
+                    margin-bottom: 1.5em;
+
+                    .accordion__item-content-services-wrapper {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 330px auto auto auto;
+                        grid-column-gap: 1.5em;
+                        grid-row-gap: 1.5em;
+
+                        .accordion__item-content-services-item {
+                            margin: 0;
+                        }
+
+                        @media (max-width: 1230px) {
+                            grid-template-columns: auto auto ;
+                            grid-column-gap: 1em;
+                            grid-row-gap: 1em;
+                        }
+
+                        @media (max-width: 400px) {
+                            grid-template-columns: 1fr;
+                            grid-column-gap: 0;
+                            grid-row-gap: 0.5em;
+
+                            .accordion__item-content-services-item {
+                                img {
+                                    margin-right: 0.5em;
+                                }
+                            }
+                        }
+                    }
+                }
 
                 &-item {
                     display: flex;

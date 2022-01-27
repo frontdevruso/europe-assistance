@@ -1,10 +1,10 @@
-.medicine-preview {
+.preview {
     background-color: $darkBlue;
     color: white;
     font-family: 'Roboto', sans-serif;
 
-    position: relative;
     display: flex;
+    position: relative;
 
     &__info {
         display: flex;
@@ -28,7 +28,6 @@
 
             font-size: 0.9em;
             width: 70%;
-            margin: 0 auto;
         }
 
         @media (max-width: 575px) {

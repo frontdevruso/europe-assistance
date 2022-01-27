@@ -20,7 +20,6 @@
         font-size: 0.7em;
     
         background: #ececec;
-        border: 0.05em solid #ececec;
         box-shadow: -6px 64px 134px rgba(0, 0, 0, 0.1);
         
         max-height: 0;
@@ -45,7 +44,7 @@
         }
 
         & .option {
-            padding: 1em 1.43em;
+            padding: 1.1em 1.43em;
             line-height: 120%;
 
             label { cursor: pointer }
@@ -60,6 +59,16 @@
                     display: flex;
                 }
             }
+
+            &--form {
+                transition: .4s;
+                line-height: 1;
+
+                &:hover {
+                    background-color: #DCDCDC;
+                }
+            }
+
         }
     }
 
