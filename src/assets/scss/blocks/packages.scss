@@ -1,0 +1,265 @@
+.packages {
+    background-color: #F0F0F0;
+    padding: 4em 0;
+
+    @media (max-width: 1024px) {
+        padding: 2.5em 0;
+    }
+
+    @media (max-width: 500px) {
+        padding: 2em 0;
+    }
+
+    @media (max-width: 400px) {
+        padding: 1.5em 0 2.2em;
+    }
+        
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 2em;
+        margin-bottom: 0.625em;
+
+        @media (max-width: 1024px) {
+            font-size: 1.8em;
+            margin-bottom: 0.4em;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-size: 0.9em;
+        font-weight: 300;
+        line-height: 160%;
+
+        margin-bottom: 3.88em;
+
+        @media (max-width: 1024px) {
+            font-size: 0.8em;
+            margin-bottom: 2em;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 12px;
+        }
+    }
+
+    &__table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.1em;
+
+        @media (max-width: 1024px) {
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            grid-gap: 0.75em;
+            font-size: 1em;
+        }
+
+        &-item {
+            padding: 1.9em 2em 2.2em;
+            background-color: white;
+            box-shadow: 0px 10px 40px rgba(38, 38, 38, 0.05), 0px 2px 4px rgba(38, 38, 38, 0.02), 0px 10px 40px rgba(38, 38, 38, 0.05), 0px 2px 4px rgba(38, 38, 38, 0.02);
+        
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: 500px) {
+                padding: 20px 15px 30px;
+            }
+
+            &-heading {
+                display: flex;
+                align-items: center;
+
+                padding-bottom: 1.5em;
+                border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
+                margin-bottom: 1.5em;
+
+                @media (max-width: 400px) {
+                    padding-bottom: 20px;
+                    margin-bottom: 16px;
+                }
+
+                h2 {
+                    font-size: 1.5em;
+                    text-transform: uppercase;
+
+                    b { color: $darkBlue }
+
+                    @media (max-width: 400px) {
+                        font-size: 18px;
+                    }
+                }
+
+                svg {
+                    width: 1.55em;
+                    height: 1.55em;
+
+                    margin-right: 0.75em;
+
+                    @media (max-width: 400px) {
+                        width: 24px;
+                        height: 24px;
+
+                        margin-right: 10px;
+                    }
+                }
+
+                &--red {
+                    h2 {
+                        b {
+                            color: $spanishRed;
+                        }
+                    }
+                }
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 1em;
+
+                display: block;
+                margin-bottom: 0.75em;
+
+                @media (max-width: 400px) {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .s-short {
+                max-width: 220px;
+                line-height: 160%;
+                font-size: 1em;
+                margin-bottom: 1.5em;
+
+                b { color: $darkBlue }
+
+                @media (max-width: 400px) {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            p {
+                font-size: 0.9em;
+                font-weight: 300;
+                margin-bottom: 1.667em;
+
+                @media (max-width: 400px) {
+                    font-size: 12px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                margin-right: 5%;
+
+                li {
+                    display: flex;
+                    img {
+                        width: 0.9em;
+                        height: 0.7em;
+    
+                        margin-top: 0.35em;
+                        margin-right: 0.75em;
+    
+                        @media (max-width: 400px) {
+                            width: 0.6em;
+                            height: 0.4em;
+    
+                            margin-right: 0.25em;
+                            margin-top: 0.2em;
+                        }
+                    }
+                    p { margin-bottom: 0 }
+
+                    &:not(:last-child) {
+                        margin-bottom: 1em;
+                    }
+
+                    @media (max-width: 400px) {
+                        &:not(:last-child) {
+                            margin-bottom: 0.5em;
+                        }
+                    }
+                }
+            }
+
+            .g-red-link {
+                padding: 0.8em 2.5em;
+                border: 0.05em solid $spanishRed;
+                margin-top: auto;
+
+                span {
+                    margin-bottom: 0;
+                    font-size: 0.8em;
+                }
+
+                @media (max-width: 768px) {
+                    margin-top: 2em;
+                }
+
+                @media (max-width: 400px) {
+                    margin-top: 20px;
+                    width: initial;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span { font-size: 0.6em }
+                    svg { margin-bottom: 0.05em;}
+                }
+            }
+
+            .g-red-link--blue {
+                background-color: $darkBlue;
+                padding: 0.8em 2.5em;
+                border: 0.05em solid $darkBlue;
+                margin-top: 2em;
+
+                span {
+                    margin-bottom: 0;
+                    font-size: 0.8em;
+                }
+
+                &:hover {
+                    color: $darkBlue;
+                    background-color: white;
+                    svg { fill: $darkBlue }
+                }
+
+                @media (max-width: 400px) {
+                    margin-top: 20px;
+                    width: initial;
+
+                    span { font-size: 0.6em }
+                }
+            }
+        }
+    }
+}
