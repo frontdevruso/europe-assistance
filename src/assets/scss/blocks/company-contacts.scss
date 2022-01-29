@@ -26,7 +26,7 @@
 
         @media (max-width: 768px) { 
             width: 100%;
-            height: 45%;
+            height: 52%;
 
             bottom: initial;
             top: 0;
@@ -78,7 +78,18 @@
                 }
             }
 
-            a { line-height: 160% }
+            a {
+                line-height: 160%;
+                transition: .4s color;
+                width: fit-content;
+                
+                &::after { color: $lightBlack }
+
+                &:hover {
+                    color: $spanishRed;
+                    &::after { color: $lightBlack }
+                }
+            }
             .phone {
                 font-size: 1em;
                 font-weight: 700;

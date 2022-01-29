@@ -1,0 +1,212 @@
+.cybercrime {
+    padding: 4em 0;
+    background-color: #F0F0F0;
+
+    @media (max-width: 1024px) { 
+        padding: 2em 0;
+    }
+
+    @media (max-width: 400px) { 
+        padding: 1.5em 0;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1230px) { 
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 2.1em;
+        max-width: 558px;
+
+        h1 {
+            font-size: 2em;
+            text-transform: uppercase;
+
+            margin-bottom: 0.375em;
+
+            @media (max-width: 1230px) { max-width: 700px }
+            @media (max-width: 1024px) { max-width: none; margin: 0 10% 0.75em; }
+            @media (max-width: 768px) { 
+                margin: 0 5% 0.5em;
+                font-size: 1.5em;
+            }
+
+            @media (max-width: 550px) { 
+                margin: 0 0 0.5em;
+            }
+
+            @media (max-width: 450px) { 
+                font-size: 1em;
+            }
+        }
+
+        p {
+            font-size: 0.9em;
+            font-weight: 300;
+
+            line-height: 160%;
+
+            @media (max-width: 1230px) { max-width: 700px }
+            @media (max-width: 1024px) { max-width: none; margin: 0 10%; }
+            @media (max-width: 768px) { 
+                font-size: 0.8em;
+            }
+
+            @media (max-width: 450px) { 
+                margin: 0;
+                font-size: 0.6em;
+            }
+        }
+
+        .g-red-link {
+            margin-top: 1.5em;
+        }
+
+        @media (max-width: 1230px) { 
+            width: 100%;
+            max-width: none;
+
+            margin: 0 15px 2em;
+        }
+
+        @media (max-width: 1024px) { 
+            text-align: center;
+            max-width: none;
+
+            .g-red-link {
+                display: none;
+            }
+        }
+
+        @media (max-width: 450px) { 
+            margin: 0 15px 1em;
+        }
+    }
+
+    &__table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.1em;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 2.5em 1.55em;
+            box-shadow: 0px 4.82309px 19.2924px rgba(38, 38, 38, 0.05), 0px 0.964618px 1.92924px rgba(38, 38, 38, 0.02), 0px 4.82309px 19.2924px rgba(38, 38, 38, 0.05), 0px 0.964618px 1.92924px rgba(38, 38, 38, 0.02);
+
+            text-align: center;
+            background-color: white;
+
+            h1 {
+                font-family: 'GothamPro', sans-serif;
+                font-weight: 900;
+                font-size: 4em;
+                line-height: 120%;
+
+                color: $darkBlue;
+
+                @media (max-width: 550px) { 
+                    font-size: 60px;
+                }
+
+                @media (max-width: 400px) { 
+                    font-size: 38px;
+                }
+            }
+
+            p {
+                font-size: 0.8em;
+                line-height: 140%;
+                
+                color: $lightBlack;
+
+                display: flex;
+                flex-direction: column;
+
+                &::after {
+                    content: "";
+                    display: block;
+
+                    margin: 0.75em auto 0;
+                    background-color: $spanishRed;
+
+                    width: 2em;
+                    height: 0.15em;
+                }
+
+                @media (max-width: 1230px) { 
+                    margin-bottom: auto;
+                }
+
+                @media (max-width: 550px) { 
+                    font-size: 0.6em;
+                }
+
+                @media (max-width: 400px) { 
+                    font-size: 10px;
+
+                    &::after {
+                        width: 20px;
+                        height: 2px;
+                    }
+                }
+            }
+
+            @media (max-width: 550px) { 
+                padding: 1em 0.75em;
+            }
+
+            @media (max-width: 400px) { 
+                padding: 0.8em 0.3em;
+            }
+        }
+
+        @media (max-width: 1230px) { 
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        @media (max-width: 1024px) { 
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    .g-red-link--cybercrime {
+        display: none;
+
+        @media (max-width: 1024px) { 
+            display: flex;
+        }
+
+        @media (max-width: 450px) { 
+            width: 100%;
+            padding: 0.8em 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 15px;
+            
+            span {
+                font-size: 12px;
+            }
+
+            svg {
+                font-size: 0.9em;
+                margin-top: 0;
+                margin-bottom: 0.1em;
+            }
+        }
+    }
+}
