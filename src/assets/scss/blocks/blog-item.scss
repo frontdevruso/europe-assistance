@@ -5,6 +5,7 @@
 
     display: flex;
     transition: .4s box-shadow;
+    overflow: hidden;
 
     grid-column: span 2;
     grid-row: span 1;
@@ -37,10 +38,13 @@
     &-info {
         height: auto;
         padding: 1.563vw 1.302vw 1.563vw 1.563vw;
+        background-color: white;
 
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        z-index: 5;
 
         data {
             color: $darkBlue;
@@ -85,6 +89,8 @@
         img {
             width: 14.063vw;
             height: inherit;
+
+            transition: 4s transform;
         }
     }
 
@@ -138,6 +144,14 @@
 
             data { font-size: 2.5vw }
             h3 { font-size: 3.8vw; line-height: 120%;}
+        }
+    }
+
+    @media (min-width: 1024px) {
+        &:hover {
+            .blog__table-item-img {
+                img { transform: scale(1.2) }
+            }
         }
     }
 }
