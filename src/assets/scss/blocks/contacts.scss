@@ -1,5 +1,6 @@
 .contacts {
     padding: 4em 0;
+    overflow: hidden;
 
     background: center / contain no-repeat url('./../images/svg/contacts-bg.svg') $darkBlue;
     background-size: 800px 105%;
@@ -56,14 +57,13 @@
             font-weight: 700;
             font-size: 1.5em;
             font-family: 'GothamPro', sans-serif;
-            transition: .4s color;
             white-space: nowrap;
+            display: flex;
 
             &:hover { color: #c0bebe }
 
-            @media (max-width: 500px) {
-                font-size: 1.1em;
-            }
+            @media (max-width: 575px) { justify-content: center }
+            @media (max-width: 500px) { font-size: 1.1em }
         }
 
         @media (max-width: 1300px) {
@@ -169,6 +169,7 @@
                 line-height: 140%;
 
                 a { 
+                    display: inline;
                     text-decoration: underline;
                     transition: .4s;
 

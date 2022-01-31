@@ -1,5 +1,6 @@
 .certificates {
     padding: 4em 0;
+    overflow: hidden;
 
     &__heading {
         margin-bottom: 1em;
@@ -32,6 +33,7 @@
             justify-content: center;
 
             text-align: center;
+            overflow: hidden;
 
             &--certificate {
                 grid-column: span 1;

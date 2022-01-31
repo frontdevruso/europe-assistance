@@ -4,6 +4,7 @@
 
     padding: 5em 0;
     text-align: center;
+    overflow: hidden;
 
     &__container {
         @include make-container(1020px);
