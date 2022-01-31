@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: medicine-layout
 title: Europe Assistance | Medicine
 ---
 
@@ -821,15 +821,9 @@ title: Europe Assistance | Medicine
             <div class="accordion__item-content">
                 <main class="acc__item-padding">
                     <div class="video video--enabled accordion__item-content-video">
-                        <a class="video__link">
-                            <picture>
-                                <source srcset="https://i.ytimg.com/vi/9vDzTB0ExWE/maxresdefault.jpg" type="image/jpg">
-                                <img class="video__media" src="https://i.ytimg.com/vi/9vDzTB0ExWE/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
-                            </picture>
-                        </a>
-                        <button class="video__button" aria-label="Запустить видео">
-                            <div class="svg-icon play"></div>
-                        </button>
+                        <video id="player" playsinline controls>
+                            <source src="./assets/images/about-video.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </main>
 
