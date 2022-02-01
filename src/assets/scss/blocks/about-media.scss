@@ -1,6 +1,7 @@
 .about-media {
     padding: 4em 0;
     background-color: #F5F5F5;
+    overflow: hidden;
 
     @media (max-width: 1340px) { 
         padding: 4em 0 6em;

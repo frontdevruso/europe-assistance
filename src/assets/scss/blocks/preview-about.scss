@@ -29,11 +29,11 @@
             font-weight: 700;
             font-family: 'GothamPro', sans-serif;
 
-            margin-bottom: 0.333em;
+            padding-bottom: 0.333em;
 
             @media (max-width: 400px) {
                 font-size: 24px;
-                margin-bottom: 15px;
+                padding-bottom: 15px;
             }
         }
 
