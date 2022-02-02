@@ -167,11 +167,10 @@
 
                     span {
                         font-size: 0.9em;
+                        font-weight: 300;
                         margin-bottom: 0;
 
-                        @media (max-width: 400px) { 
-                            font-size: 12px;
-                        }
+                        @media (max-width: 400px) { font-size: 12px }
                     }
 
                     &:not(:last-child) {

@@ -157,6 +157,11 @@
                     img {
                         width: 0.35em;
                         height: 0.75em;
+
+                        @media (max-width: 575px) {
+                            width: 10px;
+                            height: 23px;
+                        }
                     }
                 }
 
@@ -164,6 +169,11 @@
                     img {
                         width: 0.9em;
                         height: 0.55em;
+
+                        @media (max-width: 575px) {
+                            width: 26px;
+                            height: 13px;
+                        }
                     }
                 }
                 
@@ -171,12 +181,15 @@
                     img {
                         width: 0.85em;
                         height: 0.85em;
+
+                        @media (max-width: 575px) {
+                            width: 25px;
+                            height: 25px;
+                        }
                     }
                 }
 
-                &:hover {
-                    transform: translateY(-0.15em);
-                }
+                &:hover { transform: translateY(-0.15em) }
             }
 
             @media (max-width: 575px) {
@@ -234,9 +247,7 @@
                 height: 0.8em;
                 transition: .4s;
 
-                &:hover {
-                    fill: $darkBlue;
-                }
+                &:hover { fill: $darkBlue }
             }
 
             &--mb {
