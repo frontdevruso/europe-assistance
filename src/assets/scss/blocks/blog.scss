@@ -130,8 +130,8 @@
         font-size: 16px;
         font-family: 'GothamPro', sans-serif;
         font-weight: 700;
-
-        &:hover { background-color: #fcfcfc }
+        
+        @media (min-width: 400px) { &:hover { color: $darkBlue } }
 
         @media (max-width: 400px) {
             margin-top: 15px;

@@ -6,9 +6,7 @@
     position: relative;
     overflow: hidden;
 
-    &__container {
-        display: flex;
-    }
+    &__container { display: flex }
 
     &__map {
         position: absolute;
@@ -73,9 +71,7 @@
 
                 line-height: 160%;
 
-                @media (max-width: 992px) { 
-                    max-width: 300px;
-                }
+                @media (max-width: 992px) { max-width: 300px }
             }
 
             a {
@@ -90,6 +86,7 @@
                     &::after { color: $lightBlack }
                 }
             }
+            
             .phone {
                 font-size: 1em;
                 font-weight: 700;
@@ -112,9 +109,7 @@
                 font-size: 0.9em;
             }
 
-            &:not(:last-child) {
-                margin-bottom: 1.25em;
-            }
+            &:not(:last-child) { margin-bottom: 1.25em }
 
             @media (max-width: 400px) { 
                 &:not(:last-child) { margin-bottom: 15px }
@@ -126,9 +121,7 @@
             border: 0.05em solid $spanishRed;
             padding: 0.8em 3.1em;
 
-            &:hover {
-                color: $spanishRed;
-            }
+            &:hover { color: $spanishRed }
         }
 
         @media (max-width: 992px) { 
@@ -140,9 +133,7 @@
             padding: 3em;
             margin: 0 auto;
 
-            h1 {
-                font-size: 1.9em;
-            }
+            h1 { font-size: 1.9em }
         }
 
         @media (max-width: 400px) { 
@@ -156,11 +147,12 @@
                 justify-content: center;
             }
             .phone { font-size: 1.1em }
-            span { font-size: 10; }
+            span {
+                font-size: 10px;
+                margin-bottom: 3px;
+            }
         } 
     }
 
-    @media (max-width: 768px) { 
-        padding: 10em 0 4em;
-    }
+    @media (max-width: 768px) { padding: 10em 0 4em }
 }

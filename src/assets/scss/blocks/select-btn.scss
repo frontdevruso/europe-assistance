@@ -52,11 +52,16 @@
             &--blog {
                 font-size: 20px;
                 padding: 0.375em 1em;
+                transition: .4s;
 
                 label { 
                     line-height: 1;
                     font-size: 0.7em;
                     display: flex;
+                }
+
+                &:hover {
+                    background-color: #f1f1f1;
                 }
             }
 
