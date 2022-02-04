@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".burger");
     const links = document.querySelectorAll(".menu__links-item");
+    const decalreLink = document.querySelector(".header__helpful-declare");
     const menu = document.getElementById("menu");
     const body = document.body;
     

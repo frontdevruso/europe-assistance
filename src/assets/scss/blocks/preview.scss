@@ -9,9 +9,7 @@
     &__container {
         width: 100%;
 
-        @media (max-width: 950px) {
-            width: initial;
-        }
+        @media (max-width: 950px) { width: initial }
     }
 
     &__info {

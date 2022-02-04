@@ -82,7 +82,7 @@
                 &::after { color: $lightBlack }
 
                 &:hover {
-                    color: $spanishRed;
+                    color: #6d6d6d;
                     &::after { color: $lightBlack }
                 }
             }
@@ -155,4 +155,5 @@
     }
 
     @media (max-width: 768px) { padding: 10em 0 4em }
+    @media (max-width: 400px) { padding: 10em 0 30px }
 }

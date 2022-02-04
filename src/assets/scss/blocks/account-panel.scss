@@ -72,12 +72,26 @@
                     width: 5.9em;
                     height: 6.55em;
                 }
+
+                @media (max-width: 400px) {
+                    img {
+                        width: 51px;
+                        height: 57px;
+                    }
+                }
             }
 
             &:nth-child(3) {
                 img {
                     width: 10.35em;
                     height: 6.1em;
+                }
+                
+                @media (max-width: 400px) {
+                    img {
+                        width: 96px;
+                        height: 57px;
+                    }
                 }
             }
 
