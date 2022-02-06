@@ -60,6 +60,7 @@
         &-wrapper {
             display: flex;
             justify-content: space-between;
+            font-size: 0.9em;
 
             &-item {
                 display: flex;
@@ -115,7 +116,7 @@
                 .second-h::after { content: "странах мира" }
 
                 @media (max-width: 768px) {
-                    &:first-child { margin-right: 30% }
+                    &:first-child { margin-right: 25% }
                 }
 
                 @media (max-width: 575px) {
@@ -127,6 +128,7 @@
                 }
             }
 
+            @media (max-width: 1230px) { font-size: 1em; }
             @media (max-width: 768px) { justify-content: start }
         }
 

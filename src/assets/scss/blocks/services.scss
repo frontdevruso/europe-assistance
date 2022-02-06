@@ -130,6 +130,8 @@
                     padding: 2.08vw 3.125vw;
                     line-height: 160%;
 
+                    &:last-child {padding-top: 0;}
+
                     @media (max-width: 1024px) {
                         font-size: 1.8vw;
                         padding: 3vw 4vw;

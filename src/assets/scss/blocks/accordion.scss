@@ -90,6 +90,7 @@
             height: 0.2em;
             background-color: #fff;
             transform: translate(-50%, -50%);
+            transition: .4s;
         }
 
         &:after {
@@ -102,6 +103,7 @@
             background-color: #fff;
             transform: translate(-50%, -50%);
             transition: opacity 0.2s;
+            transition: .4s;
         }
 
         &--open {
@@ -478,6 +480,7 @@
 
                     display: flex;
                     line-height: 120%;
+                    font-weight: 700;
 
                     padding-bottom: 0.5em;
                     margin-bottom: 0.5em;
@@ -506,7 +509,7 @@
                     max-width: 28em;
 
                     @media (max-width: 400px) {
-                        font-size: 14px;
+                        font-size: 18px;
                         font-weight: 500;
                         margin-bottom: 20px;
                     }
@@ -548,9 +551,8 @@
                             line-height: 140%;
                             max-width: 222px;
 
-                            @media (max-width: 1024px) {
-                                max-width: none;
-                            }
+                            @media (max-width: 1024px) { max-width: none }
+                            @media (max-width: 400px) { font-size: 12px }
                         }
                     }
 
@@ -564,6 +566,7 @@
                     &--compact {
                         display: flex;
                         grid-gap: 0 !important;
+                        margin-bottom: 0;
 
                         @media (max-width: 1300px) {
                             display: flex;
@@ -574,7 +577,7 @@
                     &-wrapper {
                         margin-right: 1em;
                         .accordion__item-content-faq-benefits-item {
-                            &:not(:last-child) { margin-bottom: 1.5em }
+                            margin-bottom: 1.5em;
 
                             span { max-width: none }
                             img { margin-top: 0.2em }
@@ -824,6 +827,13 @@
         
         @media (max-width: 768px) {
             font-size: 0.7em;
+        }
+
+        @media (min-width: 1024px) {
+            &:hover {
+                .accordion__icon::before { width: 1.2em }
+                .accordion__icon::after { height: 1.2em }
+            }
         }
     }
 }

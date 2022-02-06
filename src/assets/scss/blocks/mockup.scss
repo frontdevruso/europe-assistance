@@ -23,14 +23,47 @@
         margin-top: auto;
         margin-right: 5em;
 
+        position: relative;
+
+        &-hand {
+            width: 18.45em;
+            height: 25.95em;
+        }
+
+        &-logo {
+            position: absolute;
+            left: 48%;
+            top: 7%;
+            transform: translateX(-50%);
+
+            width: 3em;
+            height: 2.55em;
+
+            @media (max-width: 500px) {
+                width: 14.37vw;
+                height: 12.1875vw;
+
+                top: 8%;
+                left: 46%;
+            }
+        }
+
         @media (max-width: 1230px) {
-            margin-right: 2em;
-            margin-left: 2em;
+            margin-right: auto;
+            margin-left: auto;
         }
 
         @media (max-width: 500px) {
             width: 88.125vw;
-            height: 100%;
+            height: 125vw;
+
+            margin-right: auto;
+            margin-left: auto;
+            
+            &-hand {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
