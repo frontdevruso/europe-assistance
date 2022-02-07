@@ -42,14 +42,10 @@
 
         &--next {
             right: 0;
-            svg {
-                transform: rotate(180deg);
-            }
+            svg { transform: rotate(180deg) }
         }
 
-        &:hover {
-            background-color: $spanishRed;
-        }
+        &:hover { background-color: $spanishRed }
 
         @media (max-width: 1024px) {
             width: 2em;

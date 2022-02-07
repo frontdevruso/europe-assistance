@@ -220,13 +220,9 @@
 
             &-picture {
                 width: 100%;
-                height: 23em;
+                height: 50%;
 
                 margin-bottom: 1.5em;
-                background: left center / cover no-repeat;
-
-                @media (max-width: 575px) { height: 250px }
-                @media (max-width: 450px) { height: 200px }
             }
 
             &-paragraph {
