@@ -46,9 +46,7 @@
         }
 
         @media (max-width: 400px) {
-            a {
-                font-size: 0.8em;
-            }
+            a { font-size: 0.8em }
         }
     }
 
@@ -62,13 +60,13 @@
 
         border-top: 0.05em solid rgba(32, 32, 32, 0.1);
 
+        @supports (-webkit-touch-callout: none) { min-height: 250px; }
+
         &-contacts {
             display: flex;
             justify-content: space-between;
 
-            @media (max-width: 500px) {
-                flex-direction: column;
-            }
+            @media (max-width: 500px) { flex-direction: column }
         }
 
         &-btns {

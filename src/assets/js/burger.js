@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const burger = document.querySelector(".burger");
     const links = document.querySelectorAll(".menu__links-item");
-    const decalreLink = document.querySelector(".header__helpful-declare");
+    const decalreLink = document.getElementById("declareMenu");
     const menu = document.getElementById("menu");
     const body = document.body;
     
@@ -18,4 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
             body.classList.remove('m-open');
         });
     })
+
+    decalreLink.addEventListener('click', function() {
+        burger.classList.remove("isOpen");
+        body.classList.remove('m-open');
+    });
 });

@@ -13,6 +13,10 @@
         padding: 1.5em 0 0;
     }
 
+    .services__table-item-wrapper {
+        p { &:last-child {padding-top: 0;} }
+    }
+
     &__container {
         display: flex;
         flex-direction: column;

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 formMail.classList.remove('g-input-error');
             }
     
-            if (formPhone.value.length >= 24 || formPhone.value.length === 0 || formPhone.value.length < 20) {
+            if (formPhone.value.length >= 24 || formPhone.value.length === 0 || formPhone.value.length < 15) {
                 formPhone.classList.add('g-input-error');
                 errCount++;
             } else {

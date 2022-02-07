@@ -23,9 +23,7 @@
                         height: 21%;
                         background: linear-gradient(180deg, rgba(130, 148, 173, 0.4) 0%, rgba(130, 148, 173, 0.4) 100%);
 
-                        h2 {
-                            padding-bottom: 0;
-                        }
+                        h2 { padding-bottom: 0 }
                     }
                 }
             }
@@ -129,8 +127,6 @@
 
                     padding: 2.08vw 3.125vw;
                     line-height: 160%;
-
-                    &:last-child {padding-top: 0;}
 
                     @media (max-width: 1024px) {
                         font-size: 1.8vw;
