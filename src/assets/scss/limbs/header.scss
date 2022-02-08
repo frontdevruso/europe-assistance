@@ -52,10 +52,10 @@
         transition: .4s color;
 
         svg {
-            width: 0.6em;
-            height: 0.45em;
+            width: 0.7em;
+            height: 0.55em;
 
-            margin: 0.1em 0.2em 0 0;
+            margin: auto 0.2em auto 0;
             transition: .4s fill;
         }
 
@@ -63,13 +63,7 @@
             color: white;
             text-decoration: underline;
 
-            svg {
-                fill: white;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            svg { margin: 0 0.2em 0.1em 0; }
+            svg { fill: white }
         }
 
         @media (max-width: 900px) {
@@ -86,9 +80,7 @@
                 color: #999999;
                 text-decoration: underline;
     
-                svg {
-                    fill: #999999;
-                }
+                svg { fill: #999999 }
             }
             @media (max-width: 768px) {
                 display: flex;
@@ -126,7 +118,7 @@
             width: 0.6em;
             height: 0.6em;
 
-            margin: 0 0.1em 0 0;
+            margin: auto 0.1em auto 0;
             transition: .4s fill;
         }
 
@@ -326,7 +318,7 @@
 
     span {
         font-size: 0.8em;
-        line-height: 1;
+        line-height: 120%
     }
 
     @media (max-width: 1024px) {
@@ -438,13 +430,24 @@
             display: flex;
             align-items: center;
 
+            button {
+                padding: 0;
+                background-color: rgba(0, 0, 0, 0);
+                margin: 0.125em 0.55em auto 0;
 
-            svg {
                 width: 0.9em;
                 height: 0.9em;
 
-                margin: 0 0.55em 0.05em 0;
-                transition: .4s ease;
+                svg {
+                    width: 0.9em;
+                    height: 0.9em;
+    
+                    transition: .4s ease;
+                }
+
+                &:hover {
+                    svg { fill: $darkBlue }
+                }
             }
 
             input {

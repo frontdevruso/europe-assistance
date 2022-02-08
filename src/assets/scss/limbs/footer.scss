@@ -245,7 +245,7 @@
             svg {
                 width: 7.25em;
                 height: 0.8em;
-                transition: .4s;
+                transition: .6s ease;
 
                 &:hover { fill: $darkBlue }
             }

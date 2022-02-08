@@ -107,9 +107,8 @@
         }
 
         &--open {
-            &::after {
-                opacity: 0;
-            }
+            &::after { opacity: 0 }
+            &::before { transform: translate(-50%, -50%) !important; }
         }
     }
 
@@ -829,8 +828,8 @@
 
         @media (min-width: 1024px) {
             &:hover {
-                .accordion__icon::before { width: 1.2em }
-                .accordion__icon::after { height: 1.2em }
+                .accordion__icon::before { transform: translate(-50%, -50%) rotate(90deg) }
+                .accordion__icon::after { transform: translate(-50%, -50%) rotate(90deg) }
             }
         }
     }
