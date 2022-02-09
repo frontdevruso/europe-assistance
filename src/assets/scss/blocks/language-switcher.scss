@@ -25,6 +25,15 @@
         transition: .4s;
     }
 
+    &--main {
+        width: 100%;
+        max-width: 2.79em;
+
+        .language__switcher-select {
+            &::before { top: -0.2em }
+        }
+    }
+
     main {
         display: flex;
         align-items: center;
@@ -32,6 +41,7 @@
 
     span {
         font-size: 0.6em;
+        text-transform: uppercase;
     }
 
     svg {
