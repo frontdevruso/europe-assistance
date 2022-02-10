@@ -228,18 +228,14 @@
 
             margin-right: 0.5em;
 
-            span {
-                font-size: 0.6em;
-            }
+            span { font-size: 0.6em }
 
             @media (max-width: 500px) {
                 margin-right: 0;
                 margin-bottom: 0.75em;
             }
 
-            @media (max-width: 400px) {
-                padding: 0.8em;
-            }
+            @media (max-width: 400px) { padding: 0.8em }
         }
     }
 
@@ -537,7 +533,7 @@
         align-items: center;
 
         height: 0;
-        padding: 0 0.75em;
+        padding: 0 0.75em 0 0;
         transition: .4s;
         opacity: 0;
 
@@ -546,11 +542,22 @@
             opacity: 1;
         }
 
+        button {
+            background-color: rgba(0, 0, 0, 0);
+            padding: 0;
+
+            width: auto;
+            height: 100%;
+            padding: 0 0.5em 0 0.75em;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
         svg {
             width: 1em;
             height: 0.9em;
-
-            margin-right: 0.5em;
         }
         
         input {
