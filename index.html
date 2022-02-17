@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <link rel="shortcut icon" href="./assets/images/favicon/favico.svg" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     
     <!-- Useful meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,13 +27,14 @@
 </head>
 <body class="">
     <div class="page">
+
         <header class="header">
             <div class="header__helpful">
                 <div class="header__helpful-container container__1200px">
                     <nav class="header__helpful-nav header-b-item">
-                        <a href="">О компании</a>
-                        <a href="">Блог</a>
-                        <a href="">Контакты</a>
+                        <a href="./about.html">О компании</a>
+                        <a href="./blog.html">Блог</a>
+                        <a href="./contacts.html">Контакты</a>
                     </nav>
                     <a href="" class="header__helpful-mail header-b-item">
                         <svg id="messageIcon" width="100%" height="100%" viewBox="0 0 12 9" fill="#999999" xmlns="http://www.w3.org/2000/svg">
@@ -42,15 +48,15 @@
                         </svg>
                         <span>+7 (495) 787-21-79</span>
                     </a>
-                    <a href="" class="header__helpful-declare">
+                    <a href="#contactForm" class="header__helpful-declare">
                         <svg id="declareIcon" width="100%" height="100%" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.662 6.283a5.438 5.438 0 00-.561-2.396A5.268 5.268 0 0013.55 2.01a.584.584 0 00-.826.144.63.63 0 00.122.853c.501.376.91.869 1.19 1.438a4.151 4.151 0 010 3.677 4.02 4.02 0 01-1.19 1.438.608.608 0 00-.249.403.632.632 0 00.106.466.606.606 0 00.398.247.582.582 0 00.449-.12A5.264 5.264 0 0015.1 8.68a5.43 5.43 0 00.561-2.397z" fill="#fff"/><path d="M14.948.117a.584.584 0 00-.826.144.63.63 0 00.122.853 6.337 6.337 0 011.878 2.266 6.552 6.552 0 010 5.796 6.337 6.337 0 01-1.878 2.266.615.615 0 00-.216.309.635.635 0 000 .38c.04.123.116.231.218.307a.587.587 0 00.35.118.586.586 0 00.352-.107 7.547 7.547 0 002.245-2.701A7.803 7.803 0 0018 6.289a7.793 7.793 0 00-.807-3.458A7.546 7.546 0 0014.948.13V.117zm-9.793 2.89a.631.631 0 00.121-.853.584.584 0 00-.825-.143 5.243 5.243 0 00-1.555 1.875 5.413 5.413 0 00-.558 2.397c0 .834.191 1.655.558 2.398.368.743.9 1.385 1.554 1.875a.592.592 0 00.45.12.586.586 0 00.397-.247.626.626 0 00.021-.693.609.609 0 00-.163-.176 4.021 4.021 0 01-1.191-1.438 4.151 4.151 0 010-3.677c.281-.57.69-1.062 1.19-1.438z" fill="#fff"/><path d="M3.756 11.448a6.337 6.337 0 01-1.878-2.266 6.542 6.542 0 01-.675-2.898c0-1.007.232-2 .675-2.897A6.336 6.336 0 013.756 1.12a.612.612 0 00.241-.403.637.637 0 00-.106-.46.608.608 0 00-.392-.25.583.583 0 00-.447.11A7.547 7.547 0 00.807 2.82 7.793 7.793 0 000 6.277C0 7.48.277 8.665.807 9.735a7.548 7.548 0 002.245 2.702.587.587 0 00.351.12.586.586 0 00.351-.118.616.616 0 00.217-.308.634.634 0 00.001-.38.616.616 0 00-.216-.309v.006zM8.863 2.8c-.84.043-1.633.41-2.221 1.028a3.499 3.499 0 00-.957 2.307 3.49 3.49 0 00.384 1.67c.264.514.65.95 1.124 1.265a.907.907 0 01.294.333.94.94 0 01.105.436.59.59 0 00.163.408.556.556 0 00.396.17h1.735c.14 0 .276-.058.375-.16a.555.555 0 00.156-.387.986.986 0 01.101-.454.954.954 0 01.297-.352 3.397 3.397 0 001.31-1.717 3.51 3.51 0 00.031-2.183 3.406 3.406 0 00-1.26-1.756A3.24 3.24 0 008.861 2.8h.002zm1.244 9.393H7.885a.302.302 0 00-.297.306v.177c0 .169.133.306.297.306h2.222a.302.302 0 00.297-.306v-.177a.302.302 0 00-.297-.306zm0-1.283H7.885a.302.302 0 00-.297.306v.177c0 .169.133.306.297.306h2.222a.302.302 0 00.297-.306v-.177a.302.302 0 00-.297-.306zM9.036 14a.934.934 0 00.466-.154.972.972 0 00.332-.37H8.158c.083.163.21.3.365.393a.923.923 0 00.513.13z" fill="#fff"/></svg> 
                         <span>Заявить о случае онлайн</span>
                     </a>
-                    <a href="" class="header__helpful-account">
+                    <a href="./account.html" class="header__helpful-account">
                         <svg id="accountIcon" width="100%" height="100%" viewBox="0 0 13 14" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 13.982V14h-2.232a5.28 5.28 0 00-1.875-1.585 5.314 5.314 0 00-4.786 0A5.28 5.28 0 002.232 14H0v-.02a6.864 6.864 0 012.581-3.145A6.926 6.926 0 016.5 9.692a6.925 6.925 0 013.919 1.143A6.863 6.863 0 0113 13.982zM6.51 0H6.5a4.346 4.346 0 00-3.062 1.265A4.295 4.295 0 002.172 4.31c0 1.142.458 2.237 1.27 3.045a4.346 4.346 0 003.063 1.26c1.15 0 2.251-.453 3.064-1.26a4.295 4.295 0 001.27-3.045 4.295 4.295 0 00-1.267-3.045A4.346 4.346 0 006.511 0zm2.146 4.308c0 .424-.127.838-.364 1.19a2.168 2.168 0 01-3.317.324 2.14 2.14 0 01-.467-2.336c.164-.391.44-.726.794-.961a2.165 2.165 0 013.19.962c.108.26.164.54.164.82z"/></svg> 
                         <span>Личный кабинет</span>
                     </a>
-                    <button class="language__switcher">
+                    <button class="language__switcher language__switcher--main">
                         <main>
                             <span>RU</span>
                             <svg width="7" height="4" viewBox="0 0 7 4" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -61,30 +67,32 @@
                             </svg>
                         </main>
         
-                        <a href="" class="language__switcher-select">
+                        <div class="language__switcher-select" data-language="en">
                             <span>EN</span>
-                        </a>
+                        </div>
                     </button>
                 </div>
             </div>
         
             <nav class="header__nav">
                 <div class="header__nav-container container__1200px">
-                    <a href="./index.html">
-                        <img class="header__nav-logo" src="./assets/images/svg/logo.svg" alt="">
+                    <a class="header__nav-logo" href="./index.html">
+                        <img src="./assets/images/svg/logo.svg" alt="">
                     </a>
                     <ul class="header__nav-links">
-                        <a href="">Медицина</a>
-                        <a href="">Авто</a>
-                        <a href="">Страхование</a>
-                        <a href="">Цифровая защита</a>
-                        <a href="">Помощь на дому</a>
+                        <a href="./medicine.html">Медицина</a>
+                        <a href="./auto.html">Авто</a>
+                        <a href="./insurance.html">Страхование</a>
+                        <a href="./cybersecurity.html">Цифровая защита</a>
+                        <a href="./home-help.html">Помощь на дому</a>
                     </ul>
                     <div class="header__nav-search">
                         <div class="header__nav-search-wrapper">
-                            <svg viewBox="0 0 18 18" fill="#B8B8B8" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.0918 15.9084L14.0002 12.8417C15.2002 11.3454 15.7814 9.44613 15.6242 7.53446C15.4669 5.62279 14.5832 3.84403 13.1548 2.56391C11.7263 1.2838 9.86167 0.599634 7.94427 0.652101C6.02686 0.704568 4.20243 1.48968 2.84612 2.84599C1.4898 4.20231 0.70469 6.02674 0.652223 7.94415C0.599756 9.86155 1.28392 11.7262 2.56403 13.1546C3.84415 14.5831 5.62292 15.4668 7.53458 15.6241C9.44625 15.7813 11.3455 15.2001 12.8418 14L15.9085 17.0667C15.986 17.1448 16.0781 17.2068 16.1797 17.2491C16.2812 17.2914 16.3902 17.3132 16.5002 17.3132C16.6102 17.3132 16.7191 17.2914 16.8206 17.2491C16.9222 17.2068 17.0144 17.1448 17.0918 17.0667C17.242 16.9113 17.326 16.7037 17.326 16.4875C17.326 16.2714 17.242 16.0638 17.0918 15.9084ZM8.16683 14C7.01311 14 5.88529 13.6579 4.926 13.0169C3.96672 12.376 3.21904 11.4649 2.77753 10.399C2.33602 9.33313 2.2205 8.16024 2.44558 7.02868C2.67066 5.89713 3.22624 4.85773 4.04204 4.04192C4.85785 3.22611 5.89725 2.67054 7.0288 2.44546C8.16036 2.22038 9.33325 2.3359 10.3992 2.77741C11.4651 3.21892 12.3761 3.9666 13.0171 4.92588C13.658 5.88517 14.0002 7.01299 14.0002 8.16671C14.0002 9.71381 13.3856 11.1975 12.2916 12.2915C11.1977 13.3855 9.71393 14 8.16683 14Z" />
-                            </svg>
+                            <button type="button" id="headerSearchBtn">
+                                <svg id="headerSearchIcon" viewBox="0 0 18 18" fill="#B8B8B8" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.0918 15.9084L14.0002 12.8417C15.2002 11.3454 15.7814 9.44613 15.6242 7.53446C15.4669 5.62279 14.5832 3.84403 13.1548 2.56391C11.7263 1.2838 9.86167 0.599634 7.94427 0.652101C6.02686 0.704568 4.20243 1.48968 2.84612 2.84599C1.4898 4.20231 0.70469 6.02674 0.652223 7.94415C0.599756 9.86155 1.28392 11.7262 2.56403 13.1546C3.84415 14.5831 5.62292 15.4668 7.53458 15.6241C9.44625 15.7813 11.3455 15.2001 12.8418 14L15.9085 17.0667C15.986 17.1448 16.0781 17.2068 16.1797 17.2491C16.2812 17.2914 16.3902 17.3132 16.5002 17.3132C16.6102 17.3132 16.7191 17.2914 16.8206 17.2491C16.9222 17.2068 17.0144 17.1448 17.0918 17.0667C17.242 16.9113 17.326 16.7037 17.326 16.4875C17.326 16.2714 17.242 16.0638 17.0918 15.9084ZM8.16683 14C7.01311 14 5.88529 13.6579 4.926 13.0169C3.96672 12.376 3.21904 11.4649 2.77753 10.399C2.33602 9.33313 2.2205 8.16024 2.44558 7.02868C2.67066 5.89713 3.22624 4.85773 4.04204 4.04192C4.85785 3.22611 5.89725 2.67054 7.0288 2.44546C8.16036 2.22038 9.33325 2.3359 10.3992 2.77741C11.4651 3.21892 12.3761 3.9666 13.0171 4.92588C13.658 5.88517 14.0002 7.01299 14.0002 8.16671C14.0002 9.71381 13.3856 11.1975 12.2916 12.2915C11.1977 13.3855 9.71393 14 8.16683 14Z" />
+                                </svg>
+                            </button>
                             <input id="headerSearch" type="text" placeholder="Поиск">
                         </div>
                     </div>
@@ -102,9 +110,9 @@
                             </svg>
                         </main>
         
-                        <a href="" class="language__switcher-select">
+                        <div class="language__switcher-select" data-language="en">
                             <span>EN</span>
-                        </a>
+                        </div>
                     </button>
         
                     <a href="tel:+74957872179" class="header__nav-phone nav__mb-item">
@@ -113,7 +121,9 @@
                         </svg>
                     </a>
                     <button id="searchBarBtn" type="button" class="header__nav-search-btn nav__mb-item">
-                        <svg id="headerSearchIcon"><use xlink:href="./assets/images/svg/search-icon.svg#searchIcon"></use></svg>
+                        <svg id="searchIcon" width="100%" height="100%" viewBox="0 0 18 18" fill="#B8B8B8" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.0918 15.9084L14.0002 12.8417C15.2002 11.3454 15.7814 9.44613 15.6242 7.53446C15.4669 5.62279 14.5832 3.84403 13.1548 2.56391C11.7263 1.2838 9.86167 0.599634 7.94427 0.652101C6.02686 0.704568 4.20243 1.48968 2.84612 2.84599C1.4898 4.20231 0.70469 6.02674 0.652223 7.94415C0.599756 9.86155 1.28392 11.7262 2.56403 13.1546C3.84415 14.5831 5.62292 15.4668 7.53458 15.6241C9.44625 15.7813 11.3455 15.2001 12.8418 14L15.9085 17.0667C15.986 17.1448 16.0781 17.2068 16.1797 17.2491C16.2812 17.2914 16.3902 17.3132 16.5002 17.3132C16.6102 17.3132 16.7191 17.2914 16.8206 17.2491C16.9222 17.2068 17.0144 17.1448 17.0918 17.0667C17.242 16.9113 17.326 16.7037 17.326 16.4875C17.326 16.2714 17.242 16.0638 17.0918 15.9084ZM8.16683 14C7.01311 14 5.88529 13.6579 4.926 13.0169C3.96672 12.376 3.21904 11.4649 2.77753 10.399C2.33602 9.33313 2.2205 8.16024 2.44558 7.02868C2.67066 5.89713 3.22624 4.85773 4.04204 4.04192C4.85785 3.22611 5.89725 2.67054 7.0288 2.44546C8.16036 2.22038 9.33325 2.3359 10.3992 2.77741C11.4651 3.21892 12.3761 3.9666 13.0171 4.92588C13.658 5.88517 14.0002 7.01299 14.0002 8.16671C14.0002 9.71381 13.3856 11.1975 12.2916 12.2915C11.1977 13.3855 9.71393 14 8.16683 14Z" />
+                        </svg>
                     </button>
                     
                     <div class="header__burger">
@@ -126,24 +136,26 @@
             </nav>
         
             <div id="searchBar" class="header__searchbar">
-                <svg viewBox="0 0 18 18" fill="#202020" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.0918 15.9084L14.0002 12.8417C15.2002 11.3454 15.7814 9.44613 15.6242 7.53446C15.4669 5.62279 14.5832 3.84403 13.1548 2.56391C11.7263 1.2838 9.86167 0.599634 7.94427 0.652101C6.02686 0.704568 4.20243 1.48968 2.84612 2.84599C1.4898 4.20231 0.70469 6.02674 0.652223 7.94415C0.599756 9.86155 1.28392 11.7262 2.56403 13.1546C3.84415 14.5831 5.62292 15.4668 7.53458 15.6241C9.44625 15.7813 11.3455 15.2001 12.8418 14L15.9085 17.0667C15.986 17.1448 16.0781 17.2068 16.1797 17.2491C16.2812 17.2914 16.3902 17.3132 16.5002 17.3132C16.6102 17.3132 16.7191 17.2914 16.8206 17.2491C16.9222 17.2068 17.0144 17.1448 17.0918 17.0667C17.242 16.9113 17.326 16.7037 17.326 16.4875C17.326 16.2714 17.242 16.0638 17.0918 15.9084ZM8.16683 14C7.01311 14 5.88529 13.6579 4.926 13.0169C3.96672 12.376 3.21904 11.4649 2.77753 10.399C2.33602 9.33313 2.2205 8.16024 2.44558 7.02868C2.67066 5.89713 3.22624 4.85773 4.04204 4.04192C4.85785 3.22611 5.89725 2.67054 7.0288 2.44546C8.16036 2.22038 9.33325 2.3359 10.3992 2.77741C11.4651 3.21892 12.3761 3.9666 13.0171 4.92588C13.658 5.88517 14.0002 7.01299 14.0002 8.16671C14.0002 9.71381 13.3856 11.1975 12.2916 12.2915C11.1977 13.3855 9.71393 14 8.16683 14Z" />
-                </svg>
-                <input type="text" placeholder="Поиск">
+                <button id="headerSearchBtnMb" type="button">
+                    <svg viewBox="0 0 18 18" fill="#202020" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.0918 15.9084L14.0002 12.8417C15.2002 11.3454 15.7814 9.44613 15.6242 7.53446C15.4669 5.62279 14.5832 3.84403 13.1548 2.56391C11.7263 1.2838 9.86167 0.599634 7.94427 0.652101C6.02686 0.704568 4.20243 1.48968 2.84612 2.84599C1.4898 4.20231 0.70469 6.02674 0.652223 7.94415C0.599756 9.86155 1.28392 11.7262 2.56403 13.1546C3.84415 14.5831 5.62292 15.4668 7.53458 15.6241C9.44625 15.7813 11.3455 15.2001 12.8418 14L15.9085 17.0667C15.986 17.1448 16.0781 17.2068 16.1797 17.2491C16.2812 17.2914 16.3902 17.3132 16.5002 17.3132C16.6102 17.3132 16.7191 17.2914 16.8206 17.2491C16.9222 17.2068 17.0144 17.1448 17.0918 17.0667C17.242 16.9113 17.326 16.7037 17.326 16.4875C17.326 16.2714 17.242 16.0638 17.0918 15.9084ZM8.16683 14C7.01311 14 5.88529 13.6579 4.926 13.0169C3.96672 12.376 3.21904 11.4649 2.77753 10.399C2.33602 9.33313 2.2205 8.16024 2.44558 7.02868C2.67066 5.89713 3.22624 4.85773 4.04204 4.04192C4.85785 3.22611 5.89725 2.67054 7.0288 2.44546C8.16036 2.22038 9.33325 2.3359 10.3992 2.77741C11.4651 3.21892 12.3761 3.9666 13.0171 4.92588C13.658 5.88517 14.0002 7.01299 14.0002 8.16671C14.0002 9.71381 13.3856 11.1975 12.2916 12.2915C11.1977 13.3855 9.71393 14 8.16683 14Z" />
+                    </svg>
+                </button>
+                <input id="headerSearchBarMb" type="text" placeholder="Поиск">
             </div>
         
             <aside class="menu">
                 <div class="menu__container">
                     <div class="menu__links-wrapper">
                         <div class="menu__links">
-                            <a class="menu__links-item" href="">Медицина</a>
-                            <a class="menu__links-item" href="">Авто</a>
-                            <a class="menu__links-item" href="">Страхование</a>
-                            <a class="menu__links-item" href="">Цифровая защита</a>
-                            <a class="menu__links-item" href="">Помощь на дому</a>
-                            <a class="menu__links-item" href="">О компании</a>
-                            <a class="menu__links-item" href="">Блог</a>
-                            <a class="menu__links-item" href="">Контакты</a>
+                            <a class="menu__links-item" href="./medicine.html">Медицина</a>
+                            <a class="menu__links-item" href="./auto.html">Авто</a>
+                            <a class="menu__links-item" href="./insurance.html">Страхование</a>
+                            <a class="menu__links-item" href="./cybersecurity.html">Цифровая защита</a>
+                            <a class="menu__links-item" href="./home-help.html">Помощь на дому</a>
+                            <a class="menu__links-item" href="./about.html">О компании</a>
+                            <a class="menu__links-item" href="./blog.html">Блог</a>
+                            <a class="menu__links-item" href="./contacts.html">Контакты</a>
                         </div>
                     </div>
                     <div class="menu__widgets">
@@ -163,11 +175,11 @@
                         </div>
         
                         <div class="menu__widgets-btns">
-                            <a href="" class="header__helpful-declare header__helpful-declare--menu">
+                            <a href="#contactForm" class="header__helpful-declare header__helpful-declare--menu" id="declareMenu">
                                 <svg id="declareIcon" width="100%" height="100%" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.662 6.283a5.438 5.438 0 00-.561-2.396A5.268 5.268 0 0013.55 2.01a.584.584 0 00-.826.144.63.63 0 00.122.853c.501.376.91.869 1.19 1.438a4.151 4.151 0 010 3.677 4.02 4.02 0 01-1.19 1.438.608.608 0 00-.249.403.632.632 0 00.106.466.606.606 0 00.398.247.582.582 0 00.449-.12A5.264 5.264 0 0015.1 8.68a5.43 5.43 0 00.561-2.397z" fill="#fff"/><path d="M14.948.117a.584.584 0 00-.826.144.63.63 0 00.122.853 6.337 6.337 0 011.878 2.266 6.552 6.552 0 010 5.796 6.337 6.337 0 01-1.878 2.266.615.615 0 00-.216.309.635.635 0 000 .38c.04.123.116.231.218.307a.587.587 0 00.35.118.586.586 0 00.352-.107 7.547 7.547 0 002.245-2.701A7.803 7.803 0 0018 6.289a7.793 7.793 0 00-.807-3.458A7.546 7.546 0 0014.948.13V.117zm-9.793 2.89a.631.631 0 00.121-.853.584.584 0 00-.825-.143 5.243 5.243 0 00-1.555 1.875 5.413 5.413 0 00-.558 2.397c0 .834.191 1.655.558 2.398.368.743.9 1.385 1.554 1.875a.592.592 0 00.45.12.586.586 0 00.397-.247.626.626 0 00.021-.693.609.609 0 00-.163-.176 4.021 4.021 0 01-1.191-1.438 4.151 4.151 0 010-3.677c.281-.57.69-1.062 1.19-1.438z" fill="#fff"/><path d="M3.756 11.448a6.337 6.337 0 01-1.878-2.266 6.542 6.542 0 01-.675-2.898c0-1.007.232-2 .675-2.897A6.336 6.336 0 013.756 1.12a.612.612 0 00.241-.403.637.637 0 00-.106-.46.608.608 0 00-.392-.25.583.583 0 00-.447.11A7.547 7.547 0 00.807 2.82 7.793 7.793 0 000 6.277C0 7.48.277 8.665.807 9.735a7.548 7.548 0 002.245 2.702.587.587 0 00.351.12.586.586 0 00.351-.118.616.616 0 00.217-.308.634.634 0 00.001-.38.616.616 0 00-.216-.309v.006zM8.863 2.8c-.84.043-1.633.41-2.221 1.028a3.499 3.499 0 00-.957 2.307 3.49 3.49 0 00.384 1.67c.264.514.65.95 1.124 1.265a.907.907 0 01.294.333.94.94 0 01.105.436.59.59 0 00.163.408.556.556 0 00.396.17h1.735c.14 0 .276-.058.375-.16a.555.555 0 00.156-.387.986.986 0 01.101-.454.954.954 0 01.297-.352 3.397 3.397 0 001.31-1.717 3.51 3.51 0 00.031-2.183 3.406 3.406 0 00-1.26-1.756A3.24 3.24 0 008.861 2.8h.002zm1.244 9.393H7.885a.302.302 0 00-.297.306v.177c0 .169.133.306.297.306h2.222a.302.302 0 00.297-.306v-.177a.302.302 0 00-.297-.306zm0-1.283H7.885a.302.302 0 00-.297.306v.177c0 .169.133.306.297.306h2.222a.302.302 0 00.297-.306v-.177a.302.302 0 00-.297-.306zM9.036 14a.934.934 0 00.466-.154.972.972 0 00.332-.37H8.158c.083.163.21.3.365.393a.923.923 0 00.513.13z" fill="#fff"/></svg> 
                                 <span>Заявить о случае онлайн</span>
                             </a>
-                            <a href="" class="header__helpful-account header__helpful-account--menu">
+                            <a href="./account.html" class="header__helpful-account header__helpful-account--menu">
                                 <svg id="accountIcon" width="100%" height="100%" viewBox="0 0 13 14" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 13.982V14h-2.232a5.28 5.28 0 00-1.875-1.585 5.314 5.314 0 00-4.786 0A5.28 5.28 0 002.232 14H0v-.02a6.864 6.864 0 012.581-3.145A6.926 6.926 0 016.5 9.692a6.925 6.925 0 013.919 1.143A6.863 6.863 0 0113 13.982zM6.51 0H6.5a4.346 4.346 0 00-3.062 1.265A4.295 4.295 0 002.172 4.31c0 1.142.458 2.237 1.27 3.045a4.346 4.346 0 003.063 1.26c1.15 0 2.251-.453 3.064-1.26a4.295 4.295 0 001.27-3.045 4.295 4.295 0 00-1.267-3.045A4.346 4.346 0 006.511 0zm2.146 4.308c0 .424-.127.838-.364 1.19a2.168 2.168 0 01-3.317.324 2.14 2.14 0 01-.467-2.336c.164-.391.44-.726.794-.961a2.165 2.165 0 013.19.962c.108.26.164.54.164.82z"/></svg> 
                                 <span>Личный кабинет</span>
                             </a>
@@ -183,10 +195,10 @@
                 <!-- ITEM -->
                 <div class="main-slider-item swiper-slide" style="background-image: -webkit-image-set( url('./assets/images/main-slider-1.jpg') 1x, url('./assets/images/main-slider-1@2x.jpg') 2x );">
                     <div class="main-slider-item-container">
-                        <div class="main-slider-item-tag"><span>Медицина</span></div>
-                        <h1>Медицинский ассистанс</h1>
-                        <p><span>Наша задача</span> - проследить за тем, чтобы медицинская помощь былаоказана вам в любое время</p>
-                        <a href="">
+                        <div class="main-slider-item-tag animate__fadeInUp animate__animated"><span>Медицина</span></div>
+                        <h1 class="animate__fadeInUp animate__animated">Медицинский ассистанс</h1>
+                        <p class="animate__fadeInUp animate__animated"><span>Наша задача</span> - проследить за тем, чтобы медицинская помощь была оказана вам в любое время</p>
+                        <a class="g-red-link animate__fadeInUp animate__animated" href="./medicine.html">
                             <svg id="linkMore" viewBox="0 0 21 12" fill="white" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.5303 6.0533C20.8232 5.76041 20.8232 5.28553 20.5303 4.99264L15.7574 0.21967C15.4645 -0.0732232 14.9896 -0.0732232 14.6967 0.21967C14.4038 0.512563 14.4038 0.987432 14.6967 1.28033L18.9393 5.52297L14.6967 9.76557C14.4038 10.0585 14.4038 10.5334 14.6967 10.8263C14.9896 11.1192 15.4645 11.1192 15.7574 10.8263L20.5303 6.0533ZM1.31134e-07 6.27297H20V4.77297H0L1.31134e-07 6.27297Z" />
                             </svg>
@@ -195,12 +207,12 @@
                     </div>
                 </div>
                 <!-- ITEM -->
-                <div class="main-slider-item swiper-slide" style="background-image: -webkit-image-set( url('./assets/images/main-slider-1.jpg') 1x, url('./assets/images/main-slider-1@2x.jpg') 2x );">
+                <div class="main-slider-item swiper-slide" style="background-image: -webkit-image-set( url('./assets/images/main-slider-2.jpg') 1x, url('./assets/images/main-slider-2@2x.jpg') 2x );">
                     <div class="main-slider-item-container">
-                        <div class="main-slider-item-tag"><span>Медицина</span></div>
-                        <h1>Медицинский ассистанс</h1>
-                        <p><span>Наша задача</span> - проследить за тем, чтобы медицинская помощь былаоказана вам в любое время</p>
-                        <a href="">
+                        <div class="main-slider-item-tag animate__fadeInUp animate__animated"><span>авто</span></div>
+                        <h1 class="animate__fadeInUp animate__animated">Авто</h1>
+                        <p class="animate__fadeInUp animate__animated"><span>Наша задача</span> - проследить за тем, чтобы помощь в дтп была оказана вам в любое время</p>
+                        <a class="g-red-link animate__fadeInUp animate__animated" href="./auto.html">
                             <svg id="linkMore" viewBox="0 0 21 12" fill="white" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.5303 6.0533C20.8232 5.76041 20.8232 5.28553 20.5303 4.99264L15.7574 0.21967C15.4645 -0.0732232 14.9896 -0.0732232 14.6967 0.21967C14.4038 0.512563 14.4038 0.987432 14.6967 1.28033L18.9393 5.52297L14.6967 9.76557C14.4038 10.0585 14.4038 10.5334 14.6967 10.8263C14.9896 11.1192 15.4645 11.1192 15.7574 10.8263L20.5303 6.0533ZM1.31134e-07 6.27297H20V4.77297H0L1.31134e-07 6.27297Z" />
                             </svg>
@@ -209,12 +221,40 @@
                     </div>
                 </div>
                 <!-- ITEM -->
-                <div class="main-slider-item swiper-slide" style="background-image: -webkit-image-set( url('./assets/images/main-slider-1.jpg') 1x, url('./assets/images/main-slider-1@2x.jpg') 2x );">
+                <div class="main-slider-item swiper-slide" style="background-image: -webkit-image-set( url('./assets/images/main-slider-3.jpg') 1x, url('./assets/images/main-slider-3@2x.jpg') 2x );">
                     <div class="main-slider-item-container">
-                        <div class="main-slider-item-tag"><span>Медицина</span></div>
-                        <h1>Медицинский ассистанс</h1>
-                        <p><span>Наша задача</span> - проследить за тем, чтобы медицинская помощь былаоказана вам в любое время</p>
-                        <a href="">
+                        <div class="main-slider-item-tag animate__fadeInUp animate__animated"><span>страховка</span></div>
+                        <h1 class="animate__fadeInUp animate__animated">Страхование</h1>
+                        <p class="animate__fadeInUp animate__animated"><span>Наша задача</span> - проследить за тем, чтобы юридичиская помощь была оказана вам в любое время</p>
+                        <a class="g-red-link animate__fadeInUp animate__animated" href="./insurance.html">
+                            <svg id="linkMore" viewBox="0 0 21 12" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5303 6.0533C20.8232 5.76041 20.8232 5.28553 20.5303 4.99264L15.7574 0.21967C15.4645 -0.0732232 14.9896 -0.0732232 14.6967 0.21967C14.4038 0.512563 14.4038 0.987432 14.6967 1.28033L18.9393 5.52297L14.6967 9.76557C14.4038 10.0585 14.4038 10.5334 14.6967 10.8263C14.9896 11.1192 15.4645 11.1192 15.7574 10.8263L20.5303 6.0533ZM1.31134e-07 6.27297H20V4.77297H0L1.31134e-07 6.27297Z" />
+                            </svg>
+                            <span>Узнать больше</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- ITEM -->
+                <div class="main-slider-item swiper-slide" style="background-image: -webkit-image-set( url('./assets/images/main-slider-4.jpg') 1x, url('./assets/images/main-slider-4@2x.jpg') 2x );">
+                    <div class="main-slider-item-container">
+                        <div class="main-slider-item-tag animate__fadeInUp animate__animated"><span>цифровая защита</span></div>
+                        <h1 class="animate__fadeInUp animate__animated">Цифровая защита</h1>
+                        <p class="animate__fadeInUp animate__animated"><span>Наша задача</span> - проследить за тем, чтобы юридичиская была оказана вам в любое время</p>
+                        <a class="g-red-link animate__fadeInUp animate__animated" href="./cybersecurity.html">
+                            <svg id="linkMore" viewBox="0 0 21 12" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5303 6.0533C20.8232 5.76041 20.8232 5.28553 20.5303 4.99264L15.7574 0.21967C15.4645 -0.0732232 14.9896 -0.0732232 14.6967 0.21967C14.4038 0.512563 14.4038 0.987432 14.6967 1.28033L18.9393 5.52297L14.6967 9.76557C14.4038 10.0585 14.4038 10.5334 14.6967 10.8263C14.9896 11.1192 15.4645 11.1192 15.7574 10.8263L20.5303 6.0533ZM1.31134e-07 6.27297H20V4.77297H0L1.31134e-07 6.27297Z" />
+                            </svg>
+                            <span>Узнать больше</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- ITEM -->
+                <div class="main-slider-item swiper-slide" style="background-image: -webkit-image-set( url('./assets/images/main-slider-5.jpg') 1x, url('./assets/images/main-slider-5@2x.jpg') 2x );">
+                    <div class="main-slider-item-container">
+                        <div class="main-slider-item-tag animate__fadeInUp animate__animated"><span>дом</span></div>
+                        <h1 class="animate__fadeInUp animate__animated">Помощь по дому</h1>
+                        <p class="animate__fadeInUp animate__animated"><span>Наша задача</span> - проследить за тем, чтобы юридичиская была оказана вам в любое время</p>
+                        <a class="g-red-link animate__fadeInUp animate__animated" href="./home-help.html">
                             <svg id="linkMore" viewBox="0 0 21 12" fill="white" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.5303 6.0533C20.8232 5.76041 20.8232 5.28553 20.5303 4.99264L15.7574 0.21967C15.4645 -0.0732232 14.9896 -0.0732232 14.6967 0.21967C14.4038 0.512563 14.4038 0.987432 14.6967 1.28033L18.9393 5.52297L14.6967 9.76557C14.4038 10.0585 14.4038 10.5334 14.6967 10.8263C14.9896 11.1192 15.4645 11.1192 15.7574 10.8263L20.5303 6.0533ZM1.31134e-07 6.27297H20V4.77297H0L1.31134e-07 6.27297Z" />
                             </svg>
@@ -243,25 +283,25 @@
         
         <section class="experience">
             <div class="experience__container">
-                <h1 class="experience__heading g-heading">You live, we care</h1>
-                <p class="experience__desc">
+                <h1 class="experience__heading g-heading animate__fadeInUp animate__animated wow">You live, we care</h1>
+                <p class="experience__desc animate__fadeInUp animate__animated wow">
                     <span>Наша цель</span> - оставаться самой надежной ассистанской компанией в мире
                 </p>
-                <div class="experience__list">
+                <div class="experience__list animate__fadeInUp animate__animated wow">
                     <div class="experience__list-item">
-                        <img src="./assets/images/svg/experience-1.svg" alt="experience">
+                        <span class="experience__list-item-number experience__list-item-number--plus">20</span>
                         <p>Лет на рынке</p>
                     </div>
                     <div class="experience__list-item">
-                        <img src="./assets/images/svg/experience-2.svg" alt="experience">
+                        <span class="experience__list-item-number">15</span>
                         <p>Миллионов звонков</p>
                     </div>
                     <div class="experience__list-item">
-                        <img src="./assets/images/svg/experience-3.svg" alt="experience">
+                        <span class="experience__list-item-number experience__list-item-number--plus">30</span>
                         <p>Страховых компаний</p>
                     </div>
                     <div class="experience__list-item">
-                        <img src="./assets/images/svg/experience-4.svg" alt="experience">
+                        <span class="experience__list-item-number">10</span>
                         <p>Банков</p>
                     </div>
                 </div>
@@ -272,44 +312,44 @@
             <div class="services__container">
                 <div class="services__table">
                     <!-- ITEM -->
-                    <div class="services__table-item lazy" data-bg="./assets/images/services-1.jpg" data-bg-hidpi="./assets/images/services-1@2x.jpg">
-                        <a href="" target="_blank" class="services__table-item-info">
-                            <h2>Медицина</h2>
+                    <div class="services__table-item lozad" data-background-image="./assets/images/services-1.jpg" data-background-image-set="./assets/images/services-1@2x.jpg">
+                        <a href="./medicine.html"  class="services__table-item-info">
+                            <h2 class="animate__fadeInLeft animate__animated wow">Медицина</h2>
                             <p>Мы предоставляем услуги по полису ДМС, ММС и полису путешественника, а также обеспечиваем круглосуточную организацию помощи в любой точке мира и производим оплату услуг медицинским учреждениям</p>
                         </a>
                     </div>
                     <!-- ITEM -->
-                    <div class="services__table-item lazy" data-bg="./assets/images/services-2.jpg" data-bg-hidpi="./assets/images/services-2@2x.jpg">
-                        <a href="" target="_blank" class="services__table-item-info">
-                            <h2>Авто</h2>
+                    <div class="services__table-item lozad" data-background-image="./assets/images/services-2.jpg" data-background-image-set="./assets/images/services-2@2x.jpg">
+                        <a href="./auto.html" class="services__table-item-info">
+                            <h2 class="animate__fadeInLeft animate__animated wow">Авто</h2>
                             <p>Мы предоставляем услуги по полису ДМС, ММС и полису путешественника, а также обеспечиваем круглосуточную организацию помощи в любой точке мира и производим оплату услуг медицинским учреждениям</p>
                         </a>
                     </div>
                     <!-- ITEM -->
                     <div class="services__table-item services__table-item--description">
                         <div class="services__table-item-info">
-                            <h2>Краткое описание</h2>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                            <h2 class="animate__fadeInUp animate__animated wow">Краткое описание</h2>
+                            <p class="animate__fadeInUp animate__animated wow">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                         </div>
                     </div>
                     <!-- ITEM -->
-                    <div class="services__table-item lazy" data-bg="./assets/images/services-3.jpg" data-bg-hidpi="./assets/images/services-3@2x.jpg">
-                        <a href="" target="_blank" class="services__table-item-info">
-                            <h2>Страхование</h2>
+                    <div class="services__table-item lozad" data-background-image="./assets/images/services-3.jpg" data-background-image-set="./assets/images/services-3@2x.jpg">
+                        <a href="./insurance.html" class="services__table-item-info">
+                            <h2 class="animate__fadeInLeft animate__animated wow">Страхование</h2>
                             <p>Мы предоставляем услуги по полису ДМС, ММС и полису путешественника, а также обеспечиваем круглосуточную организацию помощи в любой точке мира и производим оплату услуг медицинским учреждениям</p>
                         </a>
                     </div>
                     <!-- ITEM -->
-                    <div class="services__table-item lazy" data-bg="./assets/images/services-4.jpg" data-bg-hidpi="./assets/images/services-4@2x.jpg">
-                        <a href="" target="_blank" class="services__table-item-info">
-                            <h2>Цифровая защита</h2>
+                    <div class="services__table-item lozad" data-background-image="./assets/images/services-4.jpg" data-background-image-set="./assets/images/services-4@2x.jpg">
+                        <a href="./cybersecurity.html" class="services__table-item-info">
+                            <h2 class="animate__fadeInLeft animate__animated wow">Цифровая защита</h2>
                             <p>Мы предоставляем услуги по полису ДМС, ММС и полису путешественника, а также обеспечиваем круглосуточную организацию помощи в любой точке мира и производим оплату услуг медицинским учреждениям</p>
                         </a>
                     </div>
                     <!-- ITEM -->
-                    <div class="services__table-item lazy" data-bg="./assets/images/services-5.jpg" data-bg-hidpi="./assets/images/services-5@2x.jpg">
-                        <a href="" target="_blank" class="services__table-item-info">
-                            <h2>Помощь на дому</h2>
+                    <div class="services__table-item lozad" data-background-image="./assets/images/services-5.jpg" data-background-image-set="./assets/images/services-5@2x.jpg">
+                        <a href="./home-help.html"  class="services__table-item-info">
+                            <h2 class="animate__fadeInLeft animate__animated wow">Помощь на дому</h2>
                             <p>Мы предоставляем услуги по полису ДМС, ММС и полису путешественника, а также обеспечиваем круглосуточную организацию помощи в любой точке мира и производим оплату услуг медицинским учреждениям</p>
                         </a>
                     </div>
@@ -319,24 +359,24 @@
         
         <section class="certificates"> 
             <div class="certificates__container container__1200px">
-                <h1 class="g-heading certificates__heading">Сертификаты</h1>
+                <h1 class="g-heading certificates__heading animate__fadeInLeft animate__animated wow">Сертификаты</h1>
                 <div class="certificates__table">
                     <a href="#certificate1" data-fslightbox="certificates" class="certificates__table-item certificates__table-item--certificate">
-                        <img class="lazy" id="certificate1" data-src="./assets/images/certificate-1.jpg" data-srcset="./assets/images/certificate-1@2x.jpg" src="./assets/images/certificate-1@2x.jpg" alt="certificate">
+                        <img class="lozad" id="certificate1" data-src="./assets/images/certificate-1.jpg" data-srcset="./assets/images/certificate-1@2x.jpg" src="./assets/images/certificate-1@2x.jpg" alt="certificate">
                     </a>
                     
                     <div class="certificates__table-item certificates__table-item--iso">
-                        <img class="lazy" data-src="./assets/images/iso-1.png" data-srcset="./assets/images/iso-1@2x.png" alt="iso-certificate">
-                        <p>Системы обеспечения информационной безопасности</p>
+                        <img class="lozad animate__fadeInUp animate__animated wow" data-src="./assets/images/iso-1.png" data-srcset="./assets/images/iso-1@2x.png" alt="iso-certificate">
+                        <p class="animate__fadeInUp animate__animated wow">Системы обеспечения информационной безопасности</p>
                     </div>
         
                     <a href="#certificate2" data-fslightbox="certificates" class="certificates__table-item certificates__table-item--certificate">
-                        <img class="lazy" id="certificate2" data-src="./assets/images/certificate-2.jpg" data-srcset="./assets/images/certificate-2@2x.jpg" src="./assets/images/certificate-2@2x.jpg" alt="certificate">
+                        <img class="lozad" id="certificate2" data-src="./assets/images/certificate-2.jpg" data-srcset="./assets/images/certificate-2@2x.jpg" src="./assets/images/certificate-2@2x.jpg" alt="certificate">
                     </a>
         
                     <div class="certificates__table-item certificates__table-item--iso">
-                        <img class="lazy" data-src="./assets/images/iso-2.png" data-srcset="./assets/images/iso-2@2x.png" alt="iso-certificate">
-                        <p>Системы менеджмента качества</p>
+                        <img class="lozad animate__fadeInUp animate__animated wow" data-src="./assets/images/iso-2.png" data-srcset="./assets/images/iso-2@2x.png" alt="iso-certificate">
+                        <p class="animate__fadeInUp animate__animated wow">Системы менеджмента качества</p>
                     </div>
                 </div>
             </div>
@@ -344,13 +384,13 @@
         
         <section class="blog">
             <div class="blog__container">
-                <h1 class="blog__heading g-heading container__1200px">Блог</h1>
+                <h1 class="blog__heading g-heading container__1200px animate__fadeInLeft animate__animated wow">Блог</h1>
         
                 <div class="blog__table">
                     <!-- ITEM -->
                     <a href="" class="blog__table-item blog__table-item--long">
                         <div class="blog__table-item-img">
-                            <img class="lazy" data-src="./assets/images/blog-1.jpg" data-srcset="./assets/images/blog-1@2x.jpg" alt="blog-image">
+                            <img class="lozad" data-src="./assets/images/blog-1.jpg" data-srcset="./assets/images/blog-1@2x.jpg"> 
                             <span class="blog__table-item-img-tag">#медицина</span>
                         </div>
                         <div class="blog__table-item-info">
@@ -361,7 +401,7 @@
                     <!-- ITEM -->
                     <a href="" class="blog__table-item">
                         <div class="blog__table-item-img">
-                            <img class="lazy" data-src="./assets/images/blog-2.jpg" data-srcset="./assets/images/blog-2@2x.jpg" alt="blog-image">
+                            <img class="lozad" data-src="./assets/images/blog-2.jpg" data-srcset="./assets/images/blog-2@2x.jpg" alt="blog-image">
                             <span class="blog__table-item-img-tag">#страхование</span>
                         </div>
                         <div class="blog__table-item-info">
@@ -372,7 +412,7 @@
                     <!-- ITEM -->
                     <a href="" class="blog__table-item blog__table-item--long">
                         <div class="blog__table-item-img">
-                            <img class="lazy" data-src="./assets/images/blog-3.jpg" data-srcset="./assets/images/blog-3@2x.jpg" alt="blog-image">
+                            <img class="lozad" data-src="./assets/images/blog-3.jpg" data-srcset="./assets/images/blog-3@2x.jpg" alt="blog-image">
                             <span class="blog__table-item-img-tag">#цифровая защита</span>
                         </div>
                         <div class="blog__table-item-info">
@@ -383,7 +423,7 @@
                     <!-- ITEM -->
                     <a href="" class="blog__table-item">
                         <div class="blog__table-item-img">
-                            <img class="lazy" data-src="./assets/images/blog-4.jpg" data-srcset="./assets/images/blog-4@2x.jpg" alt="blog-image">
+                            <img class="lozad" data-src="./assets/images/blog-4.jpg" data-srcset="./assets/images/blog-4@2x.jpg" alt="blog-image">
                             <span class="blog__table-item-img-tag">#страхование</span>
                         </div>
                         <div class="blog__table-item-info">
@@ -394,7 +434,7 @@
                     <!-- ITEM -->
                     <a href="" class="blog__table-item">
                         <div class="blog__table-item-img">
-                            <img class="lazy" data-src="./assets/images/blog-5.jpg" data-srcset="./assets/images/blog-5@2x.jpg" alt="blog-image">
+                            <img class="lozad" data-src="./assets/images/blog-5.jpg" data-srcset="./assets/images/blog-5@2x.jpg" alt="blog-image">
                             <span class="blog__table-item-img-tag">#страхование</span>
                         </div>
                         <div class="blog__table-item-info">
@@ -405,7 +445,7 @@
                     <!-- ITEM -->
                     <a href="" class="blog__table-item">
                         <div class="blog__table-item-img">
-                            <img class="lazy" data-src="./assets/images/blog-6.jpg" data-srcset="./assets/images/blog-6@2x.jpg" alt="blog-image">
+                            <img class="lozad" data-src="./assets/images/blog-6.jpg" data-srcset="./assets/images/blog-6@2x.jpg" alt="blog-image">
                             <span class="blog__table-item-img-tag">#страхование</span>
                         </div>
                         <div class="blog__table-item-info">
@@ -417,19 +457,19 @@
             </div>
         </section>
             
-        <section class="contacts">
+        <section id="contactForm" class="contacts">
             <div class="contacts__container container__1200px">
                 <div class="contacts__info">
-                    <h1>Связаться с нами</h1>
-                    <p>Проконсультируйтесь с нашим специалистом по телефону или оставьте заявку</p>
-                    <a href="tel:+74957872179">+7 495 787 21 79</a>
+                    <h1 class="animate__fadeInLeft animate__animated wow">Связаться с нами</h1>
+                    <p class="animate__fadeInLeft animate__animated wow">Проконсультируйтесь с нашим специалистом по телефону или оставьте заявку</p>
+                    <a class="animate__fadeInLeft animate__animated wow" href="tel:+74957872179">+7 495 787 21 79</a>
                 </div>
         
                 <div class="card360deg">
                     <div class="front__side">
                         <form action="/" id="contactForm" class="contacts__form">
                             <div class="contacts__form-profile">
-                                <img class="lazy" data-src="./assets/images/contacts-form-avatar.png" data-src="./assets/images/contacts-form-avatar@2x.png" alt="contacts avatar form">
+                                <img class="lozad" data-src="./assets/images/contacts-form-avatar.png" data-srcset="./assets/images/contacts-form-avatar@2x.png" alt="contacts avatar form">
                                 <div class="contacts__form-profile-info">
                                     <h3>Иван иванов</h3>
                                     <span>Эксперт-консультант по маркетингу</span>
@@ -440,42 +480,42 @@
                                 <input class="g-input" data-validate-field="name" required type="text" placeholder="Ваше имя">
                                 <input class="g-input" data-validate-field="tel" required type="tel" placeholder="Ваш телефон">
                                 <input class="g-input" data-validate-field="mail" required type="email" placeholder="Ваш e-mail">
-                                <div class="select-box" id="select-box">
-                                    <div class="options-container">
-                                        <div class="option">
+                                <div class="select-box" id="selectBoxForm">
+                                    <div class="options-container" id="optionsContainer">
+                                        <div class="option option--form">
                                             <input type="radio" class="radio" id="automobiles" name="category"/>
                                             <label for="automobiles">Медицина</label>
                                         </div>
                                 
-                                        <div class="option">
+                                        <div class="option option--form">
                                             <input type="radio" class="radio" id="film" name="category" />
                                             <label for="film">Страхование</label>
                                         </div>
                                 
-                                        <div class="option">
+                                        <div class="option option--form">
                                             <input type="radio" class="radio" id="science" name="category" />
                                             <label for="science">Цифровая защита</label>
                                         </div>
                                 
-                                        <div class="option">
+                                        <div class="option option--form">
                                             <input type="radio" class="radio" id="art" name="category" />
                                             <label for="art">Авто</label>
                                         </div>
                                 
-                                        <div class="option">
+                                        <div class="option option--form">
                                             <input type="radio" class="radio" id="house" name="category" />
                                             <label for="house">Помощь по дому</label>
                                         </div>
                                 
-                                        <div class="option">
+                                        <div class="option option--form">
                                             <input type="radio" class="radio" id="office" name="category" />
                                             <label for="office">Помощь по оффису</label>
                                         </div>
                                     </div>
                             
-                                    <div class="select-box-current">Подразделения компании</div>
+                                    <div class="select-box-current" id="selectBoxCurrent">Подразделения компании</div>
         
-                                    <svg class="select-box-arrow" viewBox="0 0 13 8" fill="#A6A6A6" >
+                                    <svg class="select-box-arrow" id="selectBoxArrow" viewBox="0 0 13 8" fill="#A6A6A6" >
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.79998 6.66669L13 1.33333L11.7 -3.45862e-08L6.49999 5.33336L1.3 2.80766e-05L-2.91408e-07 1.33336L6.50001 8L5.20002 6.66667L6.49999 5.33336L7.79998 6.66669Z"/>
                                         <path d="M5.20002 6.66667L6.50001 8L7.79998 6.66669L6.49999 5.33336L5.20002 6.66667Z" />
                                     </svg>  
@@ -485,7 +525,7 @@
                             <textarea class="g-input" data-validate-field="message" required placeholder="Ваше сообщение"></textarea>
                 
                             <div class="contacts__form-btns">
-                                <span>Нажимая кнопку вы соглашаетесь согласие на <a href="" target="_blank">обработку персональных данных</a></span>
+                                <span>Нажимая кнопку вы соглашаетесь согласие на <a href="" >обработку персональных данных</a></span>
                                 <button id="contactFormBtn">Отправить</button>
                             </div>
                         </form>
@@ -508,14 +548,14 @@
                 <div class="footer__nav">
                     <a class="footer__nav-logo" href="./index.html"><img src="./assets/images/svg/logo.svg" alt=""></a>
                     <div class="footer__nav-links">
-                        <a href="">Медицина</a>
-                        <a href="">Авто</a>
-                        <a href="">Страхование</a>
-                        <a href="">Цифровая защита</a>
-                        <a href="">Помощь на дому</a>
-                        <a href="">О компании</a>
-                        <a href="">Блог</a>
-                        <a href="">Контакты</a>
+                        <a href="./medicine.html">Медицина</a>
+                        <a href="./auto.html">Авто</a>
+                        <a href="./insurance.html">Страхование</a>
+                        <a href="./cybersecurity.html">Цифровая защита</a>
+                        <a href="./home-help.html">Помощь на дому</a>
+                        <a href="./about.html">О компании</a>
+                        <a href="./blog.html">Блог</a>
+                        <a href="./contacts.html">Контакты</a>
                         <a href="">Документы</a>
                     </div>
                     <button class="language__switcher language__switcher--light">
@@ -529,9 +569,9 @@
                             </svg>
                         </main>
         
-                        <a href="" class="language__switcher-select">
+                        <div class="language__switcher-select" data-language="en">
                             <span>EN</span>
-                        </a>
+                        </div>
                     </button>
                 </div>
         
@@ -549,13 +589,13 @@
                     <a class="footer__nav-logo footer__nav-logo--mb" href="./index.html"><img src="./assets/images/svg/logo.svg" alt=""></a>
                     <div class="footer__additionally-wrapper">
                         <div class="footer__additionally-icons">
-                            <a href=""><img src="./assets/images/svg/fb-icon.svg" alt=""></a>
-                            <a href=""><img src="./assets/images/svg/vk-icon.svg" alt=""></a>
-                            <a href=""><img src="./assets/images/svg/instagram-icon.svg" alt=""></a>
+                            <a href=""><img src="./assets/images/svg/fb-icon.svg" alt="fb-icon"></a>
+                            <a href=""><img src="./assets/images/svg/vk-icon.svg" alt="vk-icon"></a>
+                            <a href=""><img src="./assets/images/svg/instagram-icon.svg" alt="instagram-icon"></a>
                         </div>
         
                         <div class="footer__additionally-policy">
-                            <a href="" target="_blank">Политика конфиденциальности</a>
+                            <a href="./policy.html" target="_blank">Политика конфиденциальности</a>
                             <a href="" target="_blank">Обработка персональных данных</a>
                         </div>
         
@@ -573,9 +613,28 @@
             </div>
         </footer>
 
+        <div class="cookies cookies--open">
+            <div class="cookies__content">
+                <div class="cookies__container">
+                    <img class="cookie-icon" src="./assets/images/svg/cookies-icon.svg" alt="cookies icon">
+                    <div class="cookies__container-info">
+                        <p>Для повышения удобства работы с сайтом Europ Assistance использует файлы cookie. В cookie содержатся данные о прошлых посещениях сайта. Если вы не хотите, чтобы эти данные обрабатывались, отключите cookie в настройках браузера.</p>
+                        <button type="button" id="cookieAgreeBtn">Согласиться</button>
+                    </div>
+                    <svg class="cookies-close" id="cookieCloseBtn" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.6">
+                            <path d="M7.2 3.14722e-07L8 0.8L0.8 8L6.35084e-09 7.2L7.2 3.14722e-07Z" fill="white"/>
+                            <path d="M8 7.2L7.2 8L0 0.8L0.8 0L8 7.2Z" fill="white"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>new WOW().init();</script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.5.0/dist/lazyload.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
