@@ -228,7 +228,7 @@
                 margin-bottom: 1.5em;
             }
 
-            &-paragraph {
+            p {
                 line-height: 160%;
                 font-weight: 300;
                 font-size: 0.9em;
@@ -239,10 +239,22 @@
                     color: $darkBlue;
                     font-weight: 500;
                 }
+            }
 
-                &--bb {
-                    border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
-                    margin-bottom: 1.5em;
+            em {
+                display: block;
+                border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
+                margin-bottom: 1.5em;
+
+                line-height: 160%;
+                font-weight: 300;
+                font-size: 0.9em;
+                
+                padding-bottom: 1.5em;
+
+                span {
+                    color: $darkBlue;
+                    font-weight: 500;
                 }
             }
 
@@ -416,54 +428,6 @@
                             margin-bottom: 20px;
                         }
                     }
-
-                    .accordion__item-content-faq-benefits {
-                        width: 100%;
-                        grid-template-columns: 1fr 1fr 1fr;
-                        grid-column-gap: 2.4em;
-                        grid-row-gap: 2em;
-
-                        @media (max-width: 1024px) {
-                            grid-template-columns: 1fr 1fr;
-                            grid-column-gap: 2em;
-                            grid-row-gap: 1.6em;
-                        }
-
-                        @media (max-width: 500px) {
-                            grid-template-columns: 1fr;
-                        }
-
-                        @media (max-width: 400px) {
-                            margin-bottom: 1em;
-                            grid-row-gap: 15px;
-                        }
-
-                        &-item {
-                            img { margin-top: 0.2em }
-    
-                            main {
-                                h5 {
-                                    font-family: 'GothamPro', sans-serif;
-                                    font-size: 0.9em;
-                                    font-weight: 700;
-
-                                    line-height: 130%;
-                                    margin-bottom: 0.75em;
-
-                                    @media (max-width: 400px) {
-                                        font-size: 12px;
-                                    }
-                                }
-
-                                span {
-                                    @media (max-width: 400px) {
-                                        font-size: 12px;
-                                        font-weight: 300;
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
 
                 .large-h2 {
@@ -525,7 +489,7 @@
                     margin-bottom: 1.5em;
                 }
 
-                &-benefits {
+                ul {
                     display: grid;
                     grid-template-columns: 13em 13em 13em;
                     grid-column-gap: 4em;
@@ -533,7 +497,7 @@
 
                     margin-bottom: 2em;
 
-                    &-item {
+                    li {
                         display: flex;
 
                         img {
@@ -575,7 +539,7 @@
                         }
                     }
 
-                    &-wrapper {
+                    main {
                         margin-right: 1em;
                         .accordion__item-content-faq-benefits-item {
                             margin-bottom: 1.5em;
@@ -607,6 +571,197 @@
                     @media (max-width: 400px) {
                         grid-template-columns: 1fr;
                         grid-gap: 1em;
+                    }
+                }
+
+                ol {
+                    display: grid;
+                    grid-template-columns: 16.4em 12.5em 20.7em;
+                    grid-column-gap: 2.7em;
+                    grid-row-gap: 1.5em;
+
+                    margin-bottom: 2em;
+
+                    li {
+                        display: flex;
+
+                        img {
+                            width: 1em;
+                            height: 0.8em;
+    
+                            fill: white;
+                            margin-right: 0.75em;
+                            margin-top: 0.4em;
+
+                            @media (max-width: 400px) { margin-top: 0.2em }
+                        }
+
+                        span {
+                            font-size: 0.8em;
+                            line-height: 140%;
+                            max-width: 222px;
+
+                            @media (max-width: 1024px) { max-width: none }
+                            @media (max-width: 400px) { font-size: 12px }
+                        }
+                    }
+
+                    &-wrapper {
+                        margin-right: 1em;
+                        .accordion__item-content-faq-benefits-item {
+                            margin-bottom: 1.5em;
+
+                            span { max-width: none }
+                            img { margin-top: 0.2em }
+
+                            @media (max-width: 400px) { &:not(:last-child) { margin-bottom: 1em } }
+                        }
+
+                        &:first-child {
+                            max-width: 19.2em;
+
+                            @media (max-width: 1300px) {
+                                max-width: none;
+                            }
+                        }
+                    }
+
+                    span { max-width: none !important }
+                    a { padding: 0.8em 3.1em !important }
+
+                    @media (max-width: 1024px) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-column-gap: 2em;
+                    }
+
+                    @media (max-width: 768px) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+
+                    @media (max-width: 400px) {
+                        grid-template-columns: 1fr;
+                        grid-gap: 1em;
+                    }
+                }
+
+                dl {
+                    grid-template-columns: 13em 13em 13em;
+
+                    display: flex;
+                    grid-gap: 0 !important;
+                    margin-bottom: 0;
+
+                    div {
+                        display: flex;
+
+                        img {
+                            width: 1em;
+                            height: 0.8em;
+    
+                            fill: white;
+                            margin-right: 0.75em;
+                            margin-top: 0.4em;
+
+                            @media (max-width: 400px) { margin-top: 0.2em }
+                        }
+
+                        span {
+                            font-size: 0.8em;
+                            line-height: 140%;
+                            max-width: 222px;
+
+                            @media (max-width: 1024px) { max-width: none }
+                            @media (max-width: 400px) { font-size: 12px }
+                        }
+                    }
+
+                    main {
+                        margin-right: 1em;
+                        div {
+                            margin-bottom: 1.5em;
+
+                            span { max-width: none }
+                            img { margin-top: 0.2em }
+
+                            @media (max-width: 400px) { &:not(:last-child) { margin-bottom: 1em } }
+                        }
+
+                        &:first-child {
+                            max-width: 19.2em;
+
+                            @media (max-width: 1300px) {
+                                max-width: none;
+                            }
+                        }
+                    }
+
+                    @media (max-width: 1300px) {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    @media (max-width: 1024px) {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-column-gap: 2em;
+                    }
+
+                    @media (max-width: 768px) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+
+                    @media (max-width: 400px) {
+                        grid-template-columns: 1fr;
+                        grid-gap: 1em;
+                    }
+                }
+
+                &--rus {
+                    ul {
+                        width: 100%;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-column-gap: 2.4em;
+                        grid-row-gap: 2em;
+
+                        @media (max-width: 1024px) {
+                            grid-template-columns: 1fr 1fr;
+                            grid-column-gap: 2em;
+                            grid-row-gap: 1.6em;
+                        }
+
+                        @media (max-width: 500px) {
+                            grid-template-columns: 1fr;
+                        }
+
+                        @media (max-width: 400px) {
+                            margin-bottom: 1em;
+                            grid-row-gap: 15px;
+                        }
+
+                        li {
+                            img { margin-top: 0.2em }
+    
+                            main {
+                                h5 {
+                                    font-family: 'GothamPro', sans-serif;
+                                    font-size: 0.9em;
+                                    font-weight: 700;
+
+                                    line-height: 130%;
+                                    margin-bottom: 0.75em;
+
+                                    @media (max-width: 400px) {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                span {
+                                    @media (max-width: 400px) {
+                                        font-size: 12px;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
