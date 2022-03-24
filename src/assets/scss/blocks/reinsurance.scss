@@ -18,10 +18,17 @@
         }
     }
 
-    &__content {
+    header {
         padding: 2.5em 2.5em 2em 2.5em;
 
         h1 {
+            font-weight: 900;
+            font-size: 40px;
+            font-family: 'GothamPro', sans-serif;
+
+            color: $lightBlack;
+            line-height: 120%;
+
             font-size: 2em;
             margin-bottom: .375em;
 
@@ -49,12 +56,11 @@
             }
         }
 
-        &-img {
+        img {
             width: 100%;
             height: 23em;
 
-            background: center center / cover no-repeat;
-            margin-bottom: 2em;            
+            margin-bottom: 2em;
 
             @media (max-width: 1230px) {
                 height: 37.39837398373984vw;
@@ -88,10 +94,10 @@
             }
         }
 
-        &-benefits {
+        ul {
             display: flex;
 
-            &-item {
+            li {
                 display: flex;
 
                 img {
@@ -149,14 +155,14 @@
         }
     }
 
-    &__services {
+    footer {
         background-color: $darkBlue;
         color: white;
         padding: 2.5em;
 
         display: flex;
 
-        &-quates {
+        em {
             max-width: 250px;
             font-size: 0.8em;
             line-height: 160%;
@@ -196,7 +202,7 @@
             }
         }
 
-        &-wrapper {
+        main {
             margin-right: 2em;
             
             h3 {
@@ -220,9 +226,55 @@
                     border-bottom: 0.05em solid rgba(255, 255, 255, 0.1);
                 }
             }
+
+            a {
+                display: flex;
+                align-items: center;
+
+                width: fit-content;
+                font-family: 'GothamPro', sans-serif;
+                font-weight: 700;
+
+                margin-top: 1.6em;
+                padding: 0.8em 2.5em;
+
+                color: white;
+                background-color: $spanishRed;
+
+                transition: .4s;
+
+                svg {
+                    width: 1em;
+                    height: 0.6em;
+
+                    margin-top: 0.1em;
+                    margin-right: 0.5em;
+
+                    fill: white;
+                    transition: .4s fill;
+                }
+
+                span {
+                    font-size: 0.8em;
+                    line-height: 150%;
+                }
+
+                &:hover {
+                    color: $spanishRed;
+                    background-color: white;
+                    svg {
+                        fill: $spanishRed;
+                    }
+                }
+                            padding: 0.8em 3.6em;
+    
+                @media (max-width: 1024px) {
+                    display: none;
+                }
+            }
         }
 
-        &-table {
+        ul {
             display: grid;
             grid-template-columns: 0.9fr 1.4fr 1.4fr 0.9fr;
             grid-column-gap: 2em;
@@ -230,7 +282,7 @@
 
             width: 100%;
 
-            &-item {
+            li {
                 display: flex;
                 
                 img {
@@ -278,14 +330,6 @@
                 grid-row-gap: 10px;
             }
         }
-    
-        .g-red-link {
-            padding: 0.8em 3.6em;
-
-            @media (max-width: 1024px) {
-                display: none;
-            }
-        }
 
         @media (max-width: 1024px) {
             flex-direction: column;
@@ -296,25 +340,66 @@
         }
     }
 
-    .g-red-link--reinsurance {
-        display: none;
-
-        @media (max-width: 1024px) {
-            display: flex;
-        }
-
-        @media (max-width: 500px) {
-            width: initial;
-            padding: 0.8em 0;
-
+    nav {
+        a {
             display: flex;
             align-items: center;
-            justify-content: center;
 
-            margin-top: 15px;
+            width: fit-content;
+            font-family: 'GothamPro', sans-serif;
+            font-weight: 700;
 
-            span { font-size: 12px }
-            svg { font-size: 0.9em }
+            margin-top: 1.6em;
+            padding: 0.8em 2.5em;
+
+            color: white;
+            background-color: $spanishRed;
+
+            transition: .4s;
+
+            svg {
+                width: 1em;
+                height: 0.6em;
+
+                margin-top: 0.1em;
+                margin-right: 0.5em;
+
+                fill: white;
+                transition: .4s fill;
+            }
+
+            span {
+                font-size: 0.8em;
+                line-height: 150%;
+            }
+
+            &:hover {
+                color: $spanishRed;
+                background-color: white;
+                svg {
+                    fill: $spanishRed;
+                }
+            }
+
+            display: none;
+    
+            @media (max-width: 1024px) {
+                display: flex !important;
+            }
+    
+            @media (max-width: 500px) {
+                width: initial;
+                padding: 0.8em 0;
+    
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                margin-top: 15px;
+    
+                span { font-size: 12px }
+                svg { font-size: 0.9em }
+            }
         }
     }
 }
