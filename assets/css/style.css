@@ -3145,13 +3145,6 @@ input:focus, textarea:focus, button:focus {
     flex-direction: column;
     padding: 0;
     background-color: white; }
-    .accordion__item .acc__item-padding {
-      padding-left: 2.25em;
-      padding-right: 2.25em; }
-      @media (max-width: 400px) {
-        .accordion__item .acc__item-padding {
-          padding-left: 15px;
-          padding-right: 15px; } }
     .accordion__item--open .accordion__icon::after {
       opacity: 0; }
     .accordion__item--open .accordion__icon::before {
@@ -3172,6 +3165,265 @@ input:focus, textarea:focus, button:focus {
       height: 100%;
       opacity: 1;
       overflow: initial; }
+    .accordion__item--compact footer {
+      padding: 2.5em;
+      margin-left: 2.25em;
+      margin-right: 2.25em; }
+      .accordion__item--compact footer h2 {
+        max-width: 19.2em !important;
+        line-height: 120%; }
+      @media (max-width: 575px) {
+        .accordion__item--compact footer {
+          padding: 1em 1.25em; } }
+      @media (max-width: 400px) {
+        .accordion__item--compact footer {
+          margin: 0;
+          padding: 20px 15px; } }
+    .accordion__item--compact q {
+      display: flex;
+      flex-direction: column;
+      padding: 2.5em 0;
+      padding-left: 2.25em;
+      padding-right: 2.25em; }
+      @media (max-width: 400px) {
+        .accordion__item--compact q {
+          padding-left: 15px;
+          padding-right: 15px; } }
+      .accordion__item--compact q h2 {
+        font-family: 'GothamPro', sans-serif;
+        font-size: 1.5em;
+        font-weight: 900;
+        color: #202020; }
+        @media (max-width: 400px) {
+          .accordion__item--compact q h2 {
+            font-size: 18px; } }
+      .accordion__item--compact q ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2.4em; }
+        @media (max-width: 1200px) {
+          .accordion__item--compact q ul {
+            font-size: 0.8em; } }
+        @media (max-width: 992px) {
+          .accordion__item--compact q ul {
+            font-size: 0.7em; } }
+        @media (max-width: 850px) {
+          .accordion__item--compact q ul {
+            font-size: 1em;
+            flex-direction: column; } }
+        @media (max-width: 400px) {
+          .accordion__item--compact q ul {
+            margin-top: 30px; } }
+      .accordion__item--compact q li {
+        display: flex;
+        flex-direction: column;
+        max-width: 15em; }
+        .accordion__item--compact q li span {
+          color: #00239C;
+          text-transform: uppercase;
+          padding: 1em 0 0.625em;
+          font-size: 0.8em;
+          font-weight: 900;
+          font-family: 'GothamPro', sans-serif; }
+          @media (max-width: 400px) {
+            .accordion__item--compact q li span {
+              font-size: 14px; } }
+        .accordion__item--compact q li p {
+          font-size: 0.9em;
+          font-weight: 300;
+          line-height: 160%; }
+        .accordion__item--compact q li:nth-child(1) img {
+          width: 3.3em;
+          height: 3.8em; }
+        .accordion__item--compact q li:nth-child(2) img {
+          width: 6.6em;
+          height: 3.8em; }
+        .accordion__item--compact q li:nth-child(3) img {
+          width: 3.5em;
+          height: 4.2em; }
+        .accordion__item--compact q li:last-child {
+          max-width: 17em; }
+        .accordion__item--compact q li > *:last-child {
+          margin-bottom: 0; }
+        @media (max-width: 850px) {
+          .accordion__item--compact q li {
+            max-width: 60%; }
+            .accordion__item--compact q li:not(:last-child) {
+              margin-bottom: 1em; } }
+        @media (max-width: 575px) {
+          .accordion__item--compact q li {
+            max-width: 238px;
+            margin: 0 auto; }
+            .accordion__item--compact q li img {
+              margin: 0 auto; }
+            .accordion__item--compact q li:not(:last-child) {
+              margin-bottom: 30px; } }
+      @media (max-width: 575px) {
+        .accordion__item--compact q {
+          text-align: center; } }
+      @media (max-width: 400px) {
+        .accordion__item--compact q {
+          padding: 1.5em 0 1.4em; } }
+    .accordion__item--services header ol {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1.55em; }
+      .accordion__item--services header ol li {
+        display: flex;
+        margin-bottom: 0.75em;
+        margin-right: 2.25em; }
+        .accordion__item--services header ol li img {
+          width: 1em;
+          height: 0.8em;
+          fill: white;
+          margin: 0.3em 0.75em 0 0; }
+        .accordion__item--services header ol li span {
+          font-weight: 300;
+          font-size: 0.8em;
+          line-height: 160%;
+          max-width: 575px; }
+          @media (max-width: 400px) {
+            .accordion__item--services header ol li span {
+              font-size: 12px; } }
+    .accordion__item--road header ol {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1.5em;
+      border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
+      margin-bottom: 1.5em; }
+      .accordion__item--road header ol main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 330px auto auto auto;
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em; }
+        .accordion__item--road header ol main li {
+          display: flex;
+          margin: 0; }
+          .accordion__item--road header ol main li img {
+            width: 1em;
+            height: 0.8em;
+            fill: white;
+            margin: 0.3em 0.75em 0 0; }
+          .accordion__item--road header ol main li span {
+            font-weight: 300;
+            font-size: 0.8em;
+            line-height: 160%;
+            max-width: 575px; }
+            @media (max-width: 400px) {
+              .accordion__item--road header ol main li span {
+                font-size: 12px; } }
+        @media (max-width: 1230px) {
+          .accordion__item--road header ol main {
+            grid-template-columns: auto auto;
+            grid-column-gap: 1em;
+            grid-row-gap: 1em; } }
+        @media (max-width: 400px) {
+          .accordion__item--road header ol main {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 0.5em; }
+            .accordion__item--road header ol main li img {
+              margin-right: 0.5em; } }
+    .accordion__item--rus footer {
+      margin: 0 2.25em 2.25em; }
+      @media (max-width: 1024px) {
+        .accordion__item--rus footer {
+          margin: 0; } }
+      .accordion__item--rus footer picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2.5em;
+        border-bottom: 0.05em solid rgba(255, 255, 255, 0.1); }
+        .accordion__item--rus footer picture h1 {
+          width: 100%;
+          max-width: 500px;
+          border-bottom: 0;
+          font-family: 'GothamPro', sans-serif; }
+          @media (max-width: 768px) {
+            .accordion__item--rus footer picture h1 {
+              line-height: 140%;
+              max-width: 300px; } }
+          @media (max-width: 400px) {
+            .accordion__item--rus footer picture h1 {
+              font-size: 20px;
+              max-width: 200px;
+              margin-bottom: 0;
+              padding-bottom: 0; } }
+        .accordion__item--rus footer picture img {
+          width: 100%;
+          margin-bottom: 2.5em; }
+          @media (max-width: 1230px) {
+            .accordion__item--rus footer picture img {
+              width: 46.01vw; } }
+          @media (max-width: 1024px) {
+            .accordion__item--rus footer picture img {
+              width: 100%;
+              margin-bottom: 1.5em; } }
+        @media (max-width: 1024px) {
+          .accordion__item--rus footer picture {
+            justify-content: start;
+            align-items: start;
+            flex-direction: column-reverse; } }
+        @media (max-width: 400px) {
+          .accordion__item--rus footer picture {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 20px; } }
+      .accordion__item--rus footer div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2.4em;
+        grid-row-gap: 2em; }
+        @media (max-width: 1024px) {
+          .accordion__item--rus footer div {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 2em;
+            grid-row-gap: 1.6em; } }
+        @media (max-width: 500px) {
+          .accordion__item--rus footer div {
+            grid-template-columns: 1fr; } }
+        @media (max-width: 400px) {
+          .accordion__item--rus footer div {
+            margin-bottom: 1em;
+            grid-row-gap: 15px; } }
+        .accordion__item--rus footer div li {
+          display: flex; }
+          .accordion__item--rus footer div li img {
+            margin-top: 0.2em; }
+          .accordion__item--rus footer div li img {
+            width: 1em;
+            height: 0.8em;
+            fill: white;
+            margin: .4em .75em 0 0; }
+            @media (max-width: 400px) {
+              .accordion__item--rus footer div li img {
+                margin-top: 0.2em; } }
+          .accordion__item--rus footer div li main h5 {
+            font-family: 'GothamPro', sans-serif;
+            font-size: 0.9em;
+            font-weight: 700;
+            line-height: 130%;
+            margin-bottom: 0.75em; }
+            @media (max-width: 400px) {
+              .accordion__item--rus footer div li main h5 {
+                font-size: 12px; } }
+          .accordion__item--rus footer div li main span {
+            font-size: 0.8em;
+            line-height: 140%;
+            max-width: 222px; }
+            @media (max-width: 1024px) {
+              .accordion__item--rus footer div li main span {
+                max-width: none; } }
+            @media (max-width: 400px) {
+              .accordion__item--rus footer div li main span {
+                font-size: 12px; } }
+          @media (max-width: 400px) {
+            .accordion__item--rus footer div li main span {
+              font-size: 12px;
+              font-weight: 300; } }
     .accordion__item-btn {
       text-align: left;
       background-color: white;
@@ -3221,7 +3473,7 @@ input:focus, textarea:focus, button:focus {
         @media (max-width: 400px) {
           .accordion__item-content b {
             font-size: 12px; } }
-      .accordion__item-content-picture {
+      .accordion__item-content img {
         width: 100%;
         height: 50%;
         margin-bottom: 1.5em; }
@@ -3285,7 +3537,7 @@ input:focus, textarea:focus, button:focus {
           .accordion__item-content-benefits-item img {
             width: 1em;
             height: 0.8em;
-            margin-right: 0.75em; }
+            margin: 0 0.75em 0 0; }
             @media (max-width: 400px) {
               .accordion__item-content-benefits-item img {
                 margin-top: 0; } }
@@ -3301,79 +3553,84 @@ input:focus, textarea:focus, button:focus {
         font-style: italic;
         margin-bottom: 1.25em;
         line-height: 140%; }
-      .accordion__item-content-faq {
+      .accordion__item-content header ul {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
+        margin-bottom: 1.25em; }
+        .accordion__item-content header ul li {
+          display: flex;
+          align-items: center;
+          padding-bottom: 1.5em; }
+          @media (max-width: 400px) {
+            .accordion__item-content header ul li {
+              padding-bottom: 1em; } }
+          .accordion__item-content header ul li img {
+            width: 1em;
+            height: 0.8em;
+            margin: 0 0.75em 0 0; }
+            @media (max-width: 400px) {
+              .accordion__item-content header ul li img {
+                margin-top: 0; } }
+          .accordion__item-content header ul li span {
+            font-size: 0.9em;
+            line-height: 160%; }
+          .accordion__item-content header ul li:not(:last-child) {
+            margin-right: 4em; }
+      .accordion__item-content footer {
         background-color: #00239C;
         color: white;
         padding: 2.5em 0; }
         @media (max-width: 400px) {
-          .accordion__item-content-faq {
+          .accordion__item-content footer {
             padding: 20px 0; } }
-        .accordion__item-content-faq--compact {
-          padding: 2.5em;
-          margin-left: 2.25em;
-          margin-right: 2.25em; }
-          .accordion__item-content-faq--compact h2 {
-            max-width: 19.2em !important;
-            line-height: 120%; }
-          @media (max-width: 575px) {
-            .accordion__item-content-faq--compact {
-              padding: 1em 1.25em; } }
-          @media (max-width: 400px) {
-            .accordion__item-content-faq--compact {
-              margin: 0;
-              padding: 20px 15px; } }
-        .accordion__item-content-faq--rus {
-          margin: 0 2.25em 2.25em; }
-          @media (max-width: 1024px) {
-            .accordion__item-content-faq--rus {
-              margin: 0; } }
-          .accordion__item-content-faq--rus .accordion__item-content-ill {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2.5em;
-            border-bottom: 0.05em solid rgba(255, 255, 255, 0.1); }
-            .accordion__item-content-faq--rus .accordion__item-content-ill h1 {
-              width: 100%;
-              max-width: 500px;
-              border-bottom: 0;
-              font-family: 'GothamPro', sans-serif; }
-              @media (max-width: 768px) {
-                .accordion__item-content-faq--rus .accordion__item-content-ill h1 {
-                  line-height: 140%;
-                  max-width: 300px; } }
-              @media (max-width: 400px) {
-                .accordion__item-content-faq--rus .accordion__item-content-ill h1 {
-                  font-size: 20px;
-                  max-width: 200px;
-                  margin-bottom: 0;
-                  padding-bottom: 0; } }
-            .accordion__item-content-faq--rus .accordion__item-content-ill img {
-              width: 100%;
-              margin-bottom: 2.5em; }
-              @media (max-width: 1230px) {
-                .accordion__item-content-faq--rus .accordion__item-content-ill img {
-                  width: 46.01vw; } }
-              @media (max-width: 1024px) {
-                .accordion__item-content-faq--rus .accordion__item-content-ill img {
-                  width: 100%;
-                  margin-bottom: 1.5em; } }
-            @media (max-width: 1024px) {
-              .accordion__item-content-faq--rus .accordion__item-content-ill {
-                justify-content: start;
-                align-items: start;
-                flex-direction: column-reverse; } }
+        .accordion__item-content footer picture {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2.5em;
+          border-bottom: 0.05em solid rgba(255, 255, 255, 0.1); }
+          .accordion__item-content footer picture h1 {
+            width: 100%;
+            max-width: 500px;
+            border-bottom: 0;
+            font-family: 'GothamPro', sans-serif; }
+            @media (max-width: 768px) {
+              .accordion__item-content footer picture h1 {
+                line-height: 140%;
+                max-width: 300px; } }
             @media (max-width: 400px) {
-              .accordion__item-content-faq--rus .accordion__item-content-ill {
-                border-bottom: none;
-                padding-bottom: 0;
-                margin-bottom: 20px; } }
-        .accordion__item-content-faq .large-h2 {
+              .accordion__item-content footer picture h1 {
+                font-size: 20px;
+                max-width: 200px;
+                margin-bottom: 0;
+                padding-bottom: 0; } }
+          .accordion__item-content footer picture img {
+            width: 100%;
+            margin-bottom: 2.5em; }
+            @media (max-width: 1230px) {
+              .accordion__item-content footer picture img {
+                width: 46.01vw; } }
+            @media (max-width: 1024px) {
+              .accordion__item-content footer picture img {
+                width: 100%;
+                margin-bottom: 1.5em; } }
+          @media (max-width: 1024px) {
+            .accordion__item-content footer picture {
+              justify-content: start;
+              align-items: start;
+              flex-direction: column-reverse; } }
+          @media (max-width: 400px) {
+            .accordion__item-content footer picture {
+              border-bottom: none;
+              padding-bottom: 0;
+              margin-bottom: 20px; } }
+        .accordion__item-content footer h6 {
           font-size: 1.5em; }
           @media (max-width: 400px) {
-            .accordion__item-content-faq .large-h2 {
+            .accordion__item-content footer h6 {
               font-size: 18px; } }
-        .accordion__item-content-faq h1 {
+        .accordion__item-content footer h1 {
           font-size: 2.5em;
           font-weight: 900;
           font-family: 'GothamPro', sans-serif;
@@ -3384,15 +3641,15 @@ input:focus, textarea:focus, button:focus {
           margin-bottom: 0.5em;
           border-bottom: 0.05em solid rgba(255, 255, 255, 0.1); }
           @media (max-width: 1200px) {
-            .accordion__item-content-faq h1 {
+            .accordion__item-content footer h1 {
               font-size: 2em; } }
           @media (max-width: 768px) {
-            .accordion__item-content-faq h1 {
+            .accordion__item-content footer h1 {
               font-size: 1.5em; } }
           @media (max-width: 400px) {
-            .accordion__item-content-faq h1 {
+            .accordion__item-content footer h1 {
               font-size: 18px; } }
-        .accordion__item-content-faq h2 {
+        .accordion__item-content footer h2 {
           font-size: 1.2em;
           font-weight: 900;
           font-family: 'GothamPro', sans-serif;
@@ -3400,237 +3657,259 @@ input:focus, textarea:focus, button:focus {
           line-height: 120%;
           max-width: 28em; }
           @media (max-width: 400px) {
-            .accordion__item-content-faq h2 {
+            .accordion__item-content footer h2 {
               font-size: 14px;
               font-weight: 500;
               margin-bottom: 20px; } }
-        .accordion__item-content-faq p {
+        .accordion__item-content footer p {
           font-size: 1em;
           font-weight: 500;
           line-height: 160%;
           max-width: 600px;
           margin-bottom: 1.5em; }
-        .accordion__item-content-faq ul {
+        .accordion__item-content footer ul {
           display: grid;
           grid-template-columns: 13em 13em 13em;
           grid-column-gap: 4em;
           grid-row-gap: 1.5em;
           margin-bottom: 2em; }
-          .accordion__item-content-faq ul li {
+          .accordion__item-content footer ul li {
             display: flex; }
-            .accordion__item-content-faq ul li img {
+            .accordion__item-content footer ul li img {
               width: 1em;
               height: 0.8em;
               fill: white;
-              margin-right: 0.75em;
-              margin-top: 0.4em; }
+              margin: .4em .75em 0 0; }
               @media (max-width: 400px) {
-                .accordion__item-content-faq ul li img {
+                .accordion__item-content footer ul li img {
                   margin-top: 0.2em; } }
-            .accordion__item-content-faq ul li span {
+            .accordion__item-content footer ul li span {
               font-size: 0.8em;
               line-height: 140%;
               max-width: 222px; }
               @media (max-width: 1024px) {
-                .accordion__item-content-faq ul li span {
+                .accordion__item-content footer ul li span {
                   max-width: none; } }
               @media (max-width: 400px) {
-                .accordion__item-content-faq ul li span {
+                .accordion__item-content footer ul li span {
                   font-size: 12px; } }
-          .accordion__item-content-faq ul--large {
+          .accordion__item-content footer ul--large {
             grid-template-columns: 16.4em 12.5em 20.7em;
             grid-column-gap: 2.7em; }
-            .accordion__item-content-faq ul--large span {
+            .accordion__item-content footer ul--large span {
               max-width: none; }
-            .accordion__item-content-faq ul--large a {
+            .accordion__item-content footer ul--large a {
               padding: 0.8em 3.1em !important; }
-          .accordion__item-content-faq ul--compact {
+          .accordion__item-content footer ul--compact {
             display: flex;
             grid-gap: 0 !important;
             margin-bottom: 0; }
             @media (max-width: 1300px) {
-              .accordion__item-content-faq ul--compact {
+              .accordion__item-content footer ul--compact {
                 display: flex;
                 flex-wrap: wrap; } }
-          .accordion__item-content-faq ul main {
+          .accordion__item-content footer ul main {
             margin-right: 1em; }
-            .accordion__item-content-faq ul main .accordion__item-content-faq-benefits-item {
+            .accordion__item-content footer ul main .accordion__item-content-faq-benefits-item {
               margin-bottom: 1.5em; }
-              .accordion__item-content-faq ul main .accordion__item-content-faq-benefits-item span {
+              .accordion__item-content footer ul main .accordion__item-content-faq-benefits-item span {
                 max-width: none; }
-              .accordion__item-content-faq ul main .accordion__item-content-faq-benefits-item img {
+              .accordion__item-content footer ul main .accordion__item-content-faq-benefits-item img {
                 margin-top: 0.2em; }
               @media (max-width: 400px) {
-                .accordion__item-content-faq ul main .accordion__item-content-faq-benefits-item:not(:last-child) {
+                .accordion__item-content footer ul main .accordion__item-content-faq-benefits-item:not(:last-child) {
                   margin-bottom: 1em; } }
-            .accordion__item-content-faq ul main:first-child {
+            .accordion__item-content footer ul main:first-child {
               max-width: 19.2em; }
               @media (max-width: 1300px) {
-                .accordion__item-content-faq ul main:first-child {
+                .accordion__item-content footer ul main:first-child {
                   max-width: none; } }
           @media (max-width: 1024px) {
-            .accordion__item-content-faq ul {
+            .accordion__item-content footer ul {
               grid-template-columns: 1fr 1fr 1fr;
               grid-column-gap: 2em; } }
           @media (max-width: 768px) {
-            .accordion__item-content-faq ul {
+            .accordion__item-content footer ul {
               grid-template-columns: 1fr 1fr; } }
           @media (max-width: 400px) {
-            .accordion__item-content-faq ul {
+            .accordion__item-content footer ul {
               grid-template-columns: 1fr;
               grid-gap: 1em; } }
-        .accordion__item-content-faq ol {
+        .accordion__item-content footer ol {
           display: grid;
           grid-template-columns: 16.4em 12.5em 20.7em;
           grid-column-gap: 2.7em;
           grid-row-gap: 1.5em;
           margin-bottom: 2em; }
-          .accordion__item-content-faq ol li {
+          .accordion__item-content footer ol li {
             display: flex; }
-            .accordion__item-content-faq ol li img {
+            .accordion__item-content footer ol li img {
               width: 1em;
               height: 0.8em;
               fill: white;
-              margin-right: 0.75em;
-              margin-top: 0.4em; }
+              margin: .4em .75em 0 0; }
               @media (max-width: 400px) {
-                .accordion__item-content-faq ol li img {
+                .accordion__item-content footer ol li img {
                   margin-top: 0.2em; } }
-            .accordion__item-content-faq ol li span {
+            .accordion__item-content footer ol li span {
               font-size: 0.8em;
               line-height: 140%;
               max-width: 222px; }
               @media (max-width: 1024px) {
-                .accordion__item-content-faq ol li span {
+                .accordion__item-content footer ol li span {
                   max-width: none; } }
               @media (max-width: 400px) {
-                .accordion__item-content-faq ol li span {
+                .accordion__item-content footer ol li span {
                   font-size: 12px; } }
-          .accordion__item-content-faq ol-wrapper {
+          .accordion__item-content footer ol-wrapper {
             margin-right: 1em; }
-            .accordion__item-content-faq ol-wrapper .accordion__item-content-faq-benefits-item {
+            .accordion__item-content footer ol-wrapper .accordion__item-content-faq-benefits-item {
               margin-bottom: 1.5em; }
-              .accordion__item-content-faq ol-wrapper .accordion__item-content-faq-benefits-item span {
+              .accordion__item-content footer ol-wrapper .accordion__item-content-faq-benefits-item span {
                 max-width: none; }
-              .accordion__item-content-faq ol-wrapper .accordion__item-content-faq-benefits-item img {
+              .accordion__item-content footer ol-wrapper .accordion__item-content-faq-benefits-item img {
                 margin-top: 0.2em; }
               @media (max-width: 400px) {
-                .accordion__item-content-faq ol-wrapper .accordion__item-content-faq-benefits-item:not(:last-child) {
+                .accordion__item-content footer ol-wrapper .accordion__item-content-faq-benefits-item:not(:last-child) {
                   margin-bottom: 1em; } }
-            .accordion__item-content-faq ol-wrapper:first-child {
+            .accordion__item-content footer ol-wrapper:first-child {
               max-width: 19.2em; }
               @media (max-width: 1300px) {
-                .accordion__item-content-faq ol-wrapper:first-child {
+                .accordion__item-content footer ol-wrapper:first-child {
                   max-width: none; } }
-          .accordion__item-content-faq ol span {
+          .accordion__item-content footer ol span {
             max-width: none !important; }
-          .accordion__item-content-faq ol a {
+          .accordion__item-content footer ol a {
             padding: 0.8em 3.1em !important; }
           @media (max-width: 1024px) {
-            .accordion__item-content-faq ol {
+            .accordion__item-content footer ol {
               grid-template-columns: 1fr 1fr 1fr;
               grid-column-gap: 2em; } }
           @media (max-width: 768px) {
-            .accordion__item-content-faq ol {
+            .accordion__item-content footer ol {
               grid-template-columns: 1fr 1fr; } }
           @media (max-width: 400px) {
-            .accordion__item-content-faq ol {
+            .accordion__item-content footer ol {
               grid-template-columns: 1fr;
               grid-gap: 1em; } }
-        .accordion__item-content-faq dl {
+        .accordion__item-content footer dl {
           grid-template-columns: 13em 13em 13em;
           display: flex;
           grid-gap: 0 !important;
           margin-bottom: 0; }
-          .accordion__item-content-faq dl div {
+          .accordion__item-content footer dl div {
             display: flex; }
-            .accordion__item-content-faq dl div img {
+            .accordion__item-content footer dl div img {
               width: 1em;
               height: 0.8em;
               fill: white;
-              margin-right: 0.75em;
-              margin-top: 0.4em; }
+              margin: .4em .75em 0 0; }
               @media (max-width: 400px) {
-                .accordion__item-content-faq dl div img {
+                .accordion__item-content footer dl div img {
                   margin-top: 0.2em; } }
-            .accordion__item-content-faq dl div span {
+            .accordion__item-content footer dl div span {
               font-size: 0.8em;
               line-height: 140%;
               max-width: 222px; }
               @media (max-width: 1024px) {
-                .accordion__item-content-faq dl div span {
+                .accordion__item-content footer dl div span {
                   max-width: none; } }
               @media (max-width: 400px) {
-                .accordion__item-content-faq dl div span {
+                .accordion__item-content footer dl div span {
                   font-size: 12px; } }
-          .accordion__item-content-faq dl main {
+          .accordion__item-content footer dl main {
             margin-right: 1em; }
-            .accordion__item-content-faq dl main div {
+            .accordion__item-content footer dl main div {
               margin-bottom: 1.5em; }
-              .accordion__item-content-faq dl main div span {
+              .accordion__item-content footer dl main div span {
                 max-width: none; }
-              .accordion__item-content-faq dl main div img {
+              .accordion__item-content footer dl main div img {
                 margin-top: 0.2em; }
               @media (max-width: 400px) {
-                .accordion__item-content-faq dl main div:not(:last-child) {
+                .accordion__item-content footer dl main div:not(:last-child) {
                   margin-bottom: 1em; } }
-            .accordion__item-content-faq dl main:first-child {
+            .accordion__item-content footer dl main:first-child {
               max-width: 19.2em; }
               @media (max-width: 1300px) {
-                .accordion__item-content-faq dl main:first-child {
+                .accordion__item-content footer dl main:first-child {
                   max-width: none; } }
           @media (max-width: 1300px) {
-            .accordion__item-content-faq dl {
+            .accordion__item-content footer dl {
               display: flex;
               flex-wrap: wrap; } }
           @media (max-width: 1024px) {
-            .accordion__item-content-faq dl {
+            .accordion__item-content footer dl {
               grid-template-columns: 1fr 1fr 1fr;
               grid-column-gap: 2em; } }
           @media (max-width: 768px) {
-            .accordion__item-content-faq dl {
+            .accordion__item-content footer dl {
               grid-template-columns: 1fr 1fr; } }
           @media (max-width: 400px) {
-            .accordion__item-content-faq dl {
+            .accordion__item-content footer dl {
               grid-template-columns: 1fr;
               grid-gap: 1em; } }
-        .accordion__item-content-faq--rus ul {
+        .accordion__item-content footer--rus ul {
           width: 100%;
           grid-template-columns: 1fr 1fr 1fr;
           grid-column-gap: 2.4em;
           grid-row-gap: 2em; }
           @media (max-width: 1024px) {
-            .accordion__item-content-faq--rus ul {
+            .accordion__item-content footer--rus ul {
               grid-template-columns: 1fr 1fr;
               grid-column-gap: 2em;
               grid-row-gap: 1.6em; } }
           @media (max-width: 500px) {
-            .accordion__item-content-faq--rus ul {
+            .accordion__item-content footer--rus ul {
               grid-template-columns: 1fr; } }
           @media (max-width: 400px) {
-            .accordion__item-content-faq--rus ul {
+            .accordion__item-content footer--rus ul {
               margin-bottom: 1em;
               grid-row-gap: 15px; } }
-          .accordion__item-content-faq--rus ul li img {
+          .accordion__item-content footer--rus ul li img {
             margin-top: 0.2em; }
-          .accordion__item-content-faq--rus ul li main h5 {
+          .accordion__item-content footer--rus ul li main h5 {
             font-family: 'GothamPro', sans-serif;
             font-size: 0.9em;
             font-weight: 700;
             line-height: 130%;
             margin-bottom: 0.75em; }
             @media (max-width: 400px) {
-              .accordion__item-content-faq--rus ul li main h5 {
+              .accordion__item-content footer--rus ul li main h5 {
                 font-size: 12px; } }
           @media (max-width: 400px) {
-            .accordion__item-content-faq--rus ul li main span {
+            .accordion__item-content footer--rus ul li main span {
               font-size: 12px;
               font-weight: 300; } }
-        .accordion__item-content-faq a {
+        .accordion__item-content footer a {
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          font-family: 'GothamPro', sans-serif;
+          font-weight: 700;
+          margin-top: 1.6em;
+          padding: 0.8em 2.5em;
+          color: white;
+          background-color: #E4002B;
+          transition: .4s;
           margin-top: 0;
           padding: 0.8em 3.6em; }
+          .accordion__item-content footer a svg {
+            width: 1em;
+            height: 0.6em;
+            margin-top: 0.1em;
+            margin-right: 0.5em;
+            fill: white;
+            transition: .4s fill; }
+          .accordion__item-content footer a span {
+            font-size: 0.8em;
+            line-height: 150%; }
+          .accordion__item-content footer a:hover {
+            color: #E4002B;
+            background-color: white; }
+            .accordion__item-content footer a:hover svg {
+              fill: #E4002B; }
           @media (max-width: 575px) {
-            .accordion__item-content-faq a {
+            .accordion__item-content footer a {
               width: 100%;
               padding: 0.8em 0;
               transition: 0 width;
@@ -3638,135 +3917,8 @@ input:focus, textarea:focus, button:focus {
               align-items: center;
               justify-content: center; } }
           @media (max-width: 400px) {
-            .accordion__item-content-faq a span {
+            .accordion__item-content footer a span {
               font-size: 12px; } }
-      .accordion__item-content-services {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 1.55em; }
-        .accordion__item-content-services--road {
-          display: flex;
-          flex-direction: column;
-          padding-bottom: 1.5em;
-          border-bottom: 0.05em solid rgba(32, 32, 32, 0.1);
-          margin-bottom: 1.5em; }
-          .accordion__item-content-services--road .accordion__item-content-services-wrapper {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 330px auto auto auto;
-            grid-column-gap: 1.5em;
-            grid-row-gap: 1.5em; }
-            .accordion__item-content-services--road .accordion__item-content-services-wrapper .accordion__item-content-services-item {
-              margin: 0; }
-            @media (max-width: 1230px) {
-              .accordion__item-content-services--road .accordion__item-content-services-wrapper {
-                grid-template-columns: auto auto;
-                grid-column-gap: 1em;
-                grid-row-gap: 1em; } }
-            @media (max-width: 400px) {
-              .accordion__item-content-services--road .accordion__item-content-services-wrapper {
-                grid-template-columns: 1fr;
-                grid-column-gap: 0;
-                grid-row-gap: 0.5em; }
-                .accordion__item-content-services--road .accordion__item-content-services-wrapper .accordion__item-content-services-item img {
-                  margin-right: 0.5em; } }
-        .accordion__item-content-services-item {
-          display: flex;
-          margin-bottom: 0.75em;
-          margin-right: 2.25em; }
-          .accordion__item-content-services-item img {
-            width: 1em;
-            height: 0.8em;
-            fill: white;
-            margin-right: 0.75em;
-            margin-top: 0.3em; }
-          .accordion__item-content-services-item span {
-            font-weight: 300;
-            font-size: 0.8em;
-            line-height: 160%;
-            max-width: 575px; }
-            @media (max-width: 400px) {
-              .accordion__item-content-services-item span {
-                font-size: 12px; } }
-      .accordion__item-content-advantage {
-        display: flex;
-        flex-direction: column;
-        padding: 2.5em 0; }
-        .accordion__item-content-advantage h2 {
-          font-family: 'GothamPro', sans-serif;
-          font-size: 1.5em;
-          font-weight: 900;
-          color: #202020; }
-          @media (max-width: 400px) {
-            .accordion__item-content-advantage h2 {
-              font-size: 18px; } }
-        .accordion__item-content-advantage-wrapper {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 2.4em; }
-          @media (max-width: 1200px) {
-            .accordion__item-content-advantage-wrapper {
-              font-size: 0.8em; } }
-          @media (max-width: 992px) {
-            .accordion__item-content-advantage-wrapper {
-              font-size: 0.7em; } }
-          @media (max-width: 850px) {
-            .accordion__item-content-advantage-wrapper {
-              font-size: 1em;
-              flex-direction: column; } }
-          @media (max-width: 400px) {
-            .accordion__item-content-advantage-wrapper {
-              margin-top: 30px; } }
-        .accordion__item-content-advantage-item {
-          display: flex;
-          flex-direction: column;
-          max-width: 15em; }
-          .accordion__item-content-advantage-item span {
-            color: #00239C;
-            text-transform: uppercase;
-            padding: 1em 0 0.625em;
-            font-size: 0.8em;
-            font-weight: 900;
-            font-family: 'GothamPro', sans-serif; }
-            @media (max-width: 400px) {
-              .accordion__item-content-advantage-item span {
-                font-size: 14px; } }
-          .accordion__item-content-advantage-item p {
-            font-size: 0.9em;
-            font-weight: 300;
-            line-height: 160%; }
-          .accordion__item-content-advantage-item:nth-child(1) img {
-            width: 3.3em;
-            height: 3.8em; }
-          .accordion__item-content-advantage-item:nth-child(2) img {
-            width: 6.6em;
-            height: 3.8em; }
-          .accordion__item-content-advantage-item:nth-child(3) img {
-            width: 3.5em;
-            height: 4.2em; }
-          .accordion__item-content-advantage-item:last-child {
-            max-width: 17em; }
-          .accordion__item-content-advantage-item > *:last-child {
-            margin-bottom: 0; }
-          @media (max-width: 850px) {
-            .accordion__item-content-advantage-item {
-              max-width: 60%; }
-              .accordion__item-content-advantage-item:not(:last-child) {
-                margin-bottom: 1em; } }
-          @media (max-width: 575px) {
-            .accordion__item-content-advantage-item {
-              max-width: 238px;
-              margin: 0 auto; }
-              .accordion__item-content-advantage-item img {
-                margin: 0 auto; }
-              .accordion__item-content-advantage-item:not(:last-child) {
-                margin-bottom: 30px; } }
-        @media (max-width: 575px) {
-          .accordion__item-content-advantage {
-            text-align: center; } }
-        @media (max-width: 400px) {
-          .accordion__item-content-advantage {
-            padding: 1.5em 0 1.4em; } }
     .accordion__item:not(:last-child) {
       margin-bottom: 0.25em; }
     @media (max-width: 768px) {
@@ -3777,6 +3929,14 @@ input:focus, textarea:focus, button:focus {
         transform: translate(-50%, -50%) rotate(90deg); }
       .accordion__item:hover .accordion__icon::after {
         transform: translate(-50%, -50%) rotate(90deg); } }
+
+.acc__item-padding header, .acc__item-padding footer, .acc__item-padding .accordion__item-btn {
+  padding-left: 2.25em;
+  padding-right: 2.25em; }
+  @media (max-width: 400px) {
+    .acc__item-padding header, .acc__item-padding footer, .acc__item-padding .accordion__item-btn {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .plyr {
   position: relative;
@@ -4980,103 +5140,107 @@ video {
     @media (max-width: 1230px) {
       .reinsurance__container {
         margin: 0 15px; } }
-  .reinsurance__content {
+  .reinsurance header {
     padding: 2.5em 2.5em 2em 2.5em; }
-    .reinsurance__content h1 {
+    .reinsurance header h1 {
+      font-weight: 900;
+      font-size: 40px;
+      font-family: 'GothamPro', sans-serif;
+      color: #202020;
+      line-height: 120%;
       font-size: 2em;
       margin-bottom: .375em; }
       @media (max-width: 768px) {
-        .reinsurance__content h1 {
+        .reinsurance header h1 {
           font-size: 1.5em;
           margin-bottom: 0.4em; } }
       @media (max-width: 400px) {
-        .reinsurance__content h1 {
+        .reinsurance header h1 {
           font-size: 1em;
           margin-bottom: 0.5em; } }
-    .reinsurance__content p {
+    .reinsurance header p {
       font-weight: 300;
       font-size: 0.9em;
       line-height: 160%;
       margin-bottom: 1.6667em; }
       @media (max-width: 400px) {
-        .reinsurance__content p {
+        .reinsurance header p {
           font-size: 12px;
           margin-bottom: 15px; } }
-    .reinsurance__content-img {
+    .reinsurance header img {
       width: 100%;
       height: 23em;
-      background: center center / cover no-repeat;
       margin-bottom: 2em; }
       @media (max-width: 1230px) {
-        .reinsurance__content-img {
+        .reinsurance header img {
           height: 37.39837398373984vw; } }
       @media (max-width: 768px) {
-        .reinsurance__content-img {
+        .reinsurance header img {
           height: 400px; } }
       @media (max-width: 575px) {
-        .reinsurance__content-img {
+        .reinsurance header img {
           height: 250px; } }
       @media (max-width: 400px) {
-        .reinsurance__content-img {
+        .reinsurance header img {
           height: 200px;
           margin-bottom: 15px; } }
-    .reinsurance__content h3 {
+    .reinsurance header h3 {
       font-weight: 700;
       font-family: "GothamPro",sans-serif;
       font-size: 1.2em;
       line-height: 120%;
       margin-bottom: 0.625em; }
       @media (max-width: 400px) {
-        .reinsurance__content h3 {
+        .reinsurance header h3 {
           margin-bottom: 15px;
           font-size: 16px; } }
-    .reinsurance__content-benefits {
+    .reinsurance header ul {
       display: flex; }
-      .reinsurance__content-benefits-item {
+      .reinsurance header ul li {
         display: flex; }
-        .reinsurance__content-benefits-item img {
+        .reinsurance header ul li img {
           width: 0.9em;
           height: 0.7em;
           margin-top: 0.35em;
           margin-right: 0.75em; }
           @media (max-width: 400px) {
-            .reinsurance__content-benefits-item img {
+            .reinsurance header ul li img {
               width: 0.6em;
               height: 0.4em;
               margin-right: 0.25em;
               margin-top: 0.2em; } }
-        .reinsurance__content-benefits-item span {
+        .reinsurance header ul li span {
           font-weight: 300;
           font-size: 0.9em;
           line-height: 160%; }
           @media (max-width: 400px) {
-            .reinsurance__content-benefits-item span {
+            .reinsurance header ul li span {
               font-size: 12px; } }
-        .reinsurance__content-benefits-item:first-child {
+        .reinsurance header ul li:first-child {
           max-width: 27.8em;
           margin-right: 3em; }
           @media (max-width: 1230px) {
-            .reinsurance__content-benefits-item:first-child {
+            .reinsurance header ul li:first-child {
               max-width: 55%; } }
           @media (max-width: 768px) {
-            .reinsurance__content-benefits-item:first-child {
+            .reinsurance header ul li:first-child {
               max-width: none;
               margin-bottom: 1em; } }
           @media (max-width: 400px) {
-            .reinsurance__content-benefits-item:first-child {
+            .reinsurance header ul li:first-child {
               margin-bottom: 0.5em; } }
       @media (max-width: 768px) {
-        .reinsurance__content-benefits {
+        .reinsurance header ul {
           flex-direction: column; } }
     @media (max-width: 768px) {
-      .reinsurance__content {
+      .reinsurance header {
         padding: 1em 0.75em; } }
-  .reinsurance__services {
+  .reinsurance footer {
     background-color: #00239C;
     color: white;
     padding: 2.5em;
     display: flex; }
-    .reinsurance__services-quates {
+    .reinsurance footer em {
       max-width: 250px;
       font-size: 0.8em;
       line-height: 160%;
@@ -5088,7 +5252,7 @@ video {
       padding-left: 2.2em;
       border-left: 0.05em solid rgba(255, 255, 255, 0.1); }
       @media (max-width: 1024px) {
-        .reinsurance__services-quates {
+        .reinsurance footer em {
           max-width: none;
           border-top: 0.05em solid rgba(255, 255, 255, 0.1);
           border-left: none;
@@ -5097,100 +5261,150 @@ video {
           margin-top: 2.2em;
           font-size: 1em; } }
       @media (max-width: 768px) {
-        .reinsurance__services-quates {
+        .reinsurance footer em {
           padding-top: 1.2em;
           margin-top: 1.2em;
           font-size: 0.8em; } }
       @media (max-width: 400px) {
-        .reinsurance__services-quates {
+        .reinsurance footer em {
           font-size: 14px;
           padding-top: 15px;
           margin-top: 15px; } }
-    .reinsurance__services-wrapper {
+    .reinsurance footer main {
       margin-right: 2em; }
-      .reinsurance__services-wrapper h3 {
+      .reinsurance footer main h3 {
         font-family: 'GothamPro', sans-serif;
         font-size: 1.2em;
         font-weight: 700;
         line-height: 120%;
         margin-bottom: 1.6667em; }
         @media (max-width: 1230px) {
-          .reinsurance__services-wrapper h3 {
+          .reinsurance footer main h3 {
             font-size: 1em;
             margin-bottom: 1.2em; } }
         @media (max-width: 400px) {
-          .reinsurance__services-wrapper h3 {
+          .reinsurance footer main h3 {
             font-size: 18px;
             padding-bottom: 15px;
             padding-bottom: 15px;
             border-bottom: 0.05em solid rgba(255, 255, 255, 0.1); } }
-    .reinsurance__services-table {
+      .reinsurance footer main a {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        font-family: 'GothamPro', sans-serif;
+        font-weight: 700;
+        margin-top: 1.6em;
+        padding: 0.8em 2.5em;
+        color: white;
+        background-color: #E4002B;
+        transition: .4s;
+        padding: 0.8em 3.6em; }
+        .reinsurance footer main a svg {
+          width: 1em;
+          height: 0.6em;
+          margin-top: 0.1em;
+          margin-right: 0.5em;
+          fill: white;
+          transition: .4s fill; }
+        .reinsurance footer main a span {
+          font-size: 0.8em;
+          line-height: 150%; }
+        .reinsurance footer main a:hover {
+          color: #E4002B;
+          background-color: white; }
+          .reinsurance footer main a:hover svg {
+            fill: #E4002B; }
+        @media (max-width: 1024px) {
+          .reinsurance footer main a {
+            display: none; } }
+    .reinsurance footer ul {
       display: grid;
       grid-template-columns: 0.9fr 1.4fr 1.4fr 0.9fr;
       grid-column-gap: 2em;
       grid-row-gap: 1.5em;
       width: 100%; }
-      .reinsurance__services-table-item {
+      .reinsurance footer ul li {
         display: flex; }
-        .reinsurance__services-table-item img {
+        .reinsurance footer ul li img {
           width: 0.9em;
           height: 0.7em;
           margin-top: 0.2em;
           margin-right: 0.75em; }
           @media (max-width: 400px) {
-            .reinsurance__services-table-item img {
+            .reinsurance footer ul li img {
               width: 0.6em;
               height: 0.4em;
               margin-right: 0.25em;
               margin-top: 0.2em; } }
-        .reinsurance__services-table-item span {
+        .reinsurance footer ul li span {
           font-size: 0.8em;
           line-height: 140%; }
           @media (max-width: 400px) {
-            .reinsurance__services-table-item span {
+            .reinsurance footer ul li span {
               font-size: 12px; } }
       @media (max-width: 1230px) {
-        .reinsurance__services-table {
+        .reinsurance footer ul {
           grid-template-columns: 1fr 1fr; } }
       @media (max-width: 768px) {
-        .reinsurance__services-table {
+        .reinsurance footer ul {
           grid-column-gap: 2em;
           grid-row-gap: 1em; } }
       @media (max-width: 500px) {
-        .reinsurance__services-table {
+        .reinsurance footer ul {
           grid-template-columns: 1fr; } }
       @media (max-width: 400px) {
-        .reinsurance__services-table {
+        .reinsurance footer ul {
           grid-template-columns: 1fr;
           grid-column-gap: 0;
           grid-row-gap: 10px; } }
-    .reinsurance__services .g-red-link {
-      padding: 0.8em 3.6em; }
-      @media (max-width: 1024px) {
-        .reinsurance__services .g-red-link {
-          display: none; } }
     @media (max-width: 1024px) {
-      .reinsurance__services {
+      .reinsurance footer {
         flex-direction: column; } }
     @media (max-width: 768px) {
-      .reinsurance__services {
+      .reinsurance footer {
         padding: 1em 0.75em; } }
-  .reinsurance .g-red-link--reinsurance {
+  .reinsurance nav a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-family: 'GothamPro', sans-serif;
+    font-weight: 700;
+    margin-top: 1.6em;
+    padding: 0.8em 2.5em;
+    color: white;
+    background-color: #E4002B;
+    transition: .4s;
     display: none; }
+    .reinsurance nav a svg {
+      width: 1em;
+      height: 0.6em;
+      margin-top: 0.1em;
+      margin-right: 0.5em;
+      fill: white;
+      transition: .4s fill; }
+    .reinsurance nav a span {
+      font-size: 0.8em;
+      line-height: 150%; }
+    .reinsurance nav a:hover {
+      color: #E4002B;
+      background-color: white; }
+      .reinsurance nav a:hover svg {
+        fill: #E4002B; }
     @media (max-width: 1024px) {
-      .reinsurance .g-red-link--reinsurance {
-        display: flex; } }
+      .reinsurance nav a {
+        display: flex !important; } }
     @media (max-width: 500px) {
-      .reinsurance .g-red-link--reinsurance {
+      .reinsurance nav a {
         width: initial;
         padding: 0.8em 0;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 15px; }
-        .reinsurance .g-red-link--reinsurance span {
+        .reinsurance nav a span {
           font-size: 12px; }
-        .reinsurance .g-red-link--reinsurance svg {
+        .reinsurance nav a svg {
           font-size: 0.9em; } }
 
 .cybersecurity {
